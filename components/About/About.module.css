@@ -8,9 +8,42 @@
 .about__text{
     width: 60%;
     height: 100%;
-    background-color: gray;
+    padding: 4em 5em ;
+    color: #878787;
+    line-height: 30px;
+    font-weight: 300;
+    font-family: "IBM Plex Sans";
 
 }
+.about__text__switch{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 10em;
+}
+.about__text__switch__item{
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    width: 120px;
+    padding-bottom: 1em;
+    margin-bottom: 2em;
+    border-bottom: 1px solid rgba(255,255,255,0.6);
+    cursor: pointer;
+    font-size: 1em;
+    transition: .3s ease-in-out;
+}
+.about__text__switch__item:hover{
+    color: var(--special-color);
+}
+.about__text__switch__item__active{
+    color: var(--special-color);
+    border-bottom: 1px solid var(--special-color);
+}
+
+
+
+
 .about__picture{
     position: relative;
     width: 40%;

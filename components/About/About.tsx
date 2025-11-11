@@ -1,10 +1,17 @@
+'use client'
+import { useState } from "react"
 import styles from "./About.module.css"
 import Image from 'next/image'
 const About = () => {
+    const [switchText, setSwitchText]  = useState<number>(0);
     return <div className={styles.about}>
         <div className={styles.about__text}>
-            <p>Kim jestem</p>
-            <p>Mam na imię Maciej. Obecnie pracuję jako trener osobisty w klubie Fabryka Formy Bałtyk w Poznaniu. Trener personalny to mój zawód już od 2006 roku. By go wykonywać, ukończyłem profesjonalny kurs instruktorski ze specjalizacją fitness – sporty siłowe – kulturystyka (TKKF – Poznań). Przeszedłem również szkolenia z zakresu treningu crossfitowego, funkcjonalnego, trx oraz zakresu dietetyki w sporcie. Ciągle się rozwijam i wykorzystuję posiadaną wiedzę, prowadząc treningi personalne. Kształtuję zarówno męskie, jak i kobiece sylwetki wprowadzając w życie moich podopiecznych aktywność fizyczną oraz dietę. Teraz kiedy prowadzę również sklep z dietami online, mogę zaproponować więcej zbilansowanych rozwiązań, łącząc zdrowe odżywianie z indywidualnymi treningami personalnymi.</p>
+            <div className={styles.about__text__switch}>
+                <p onClick={()=>setSwitchText(0)} className={`${styles.about__text__switch__item} ${switchText === 0 ? `${styles.about__text__switch__item__active}`: ""}`}>Kim jestem</p>
+                <p onClick={()=>setSwitchText(1)} className={`${styles.about__text__switch__item} ${switchText === 1 ? `${styles.about__text__switch__item__active}`: ""}`}>Sukcesy</p>
+
+            </div>
+            <p> Nulla aspernatur in maiores molestias nesciunt, nostrum, libero culpa consequatur est alias quos! Maiores labore illo recusandae asperiores magnam, quis temporibus natus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla aspernatur in maiores molestias nesciunt, nostrum, libero culpa consequatur est alias quos! Maiores labore illo recusandae asperiores magnam, quis temporibus natus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla aspernatur in maiores molestias nesciunt, nostrum, libero culpa consequatur est alias quos! Maiores labore illo recusandae asperiores magnam, quis temporibus natus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla aspernatur in maiores molestias nesciunt, nostrum, libero culpa consequatur est alias quos! Maiores labore illo recusandae asperiores magnam, quis temporibus natus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla aspernatur in maiores molestias nesciunt, nostrum, libero culpa consequatur est alias quos! Maiores labore illo recusandae asperiores magnam, quis temporibus natus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla aspernatur in maiores molestias nesciunt, nostrum, libero culpa consequatur est alias quos! Maiores labore illo recusandae asperiores magnam, quis temporibus natus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla aspernatur in maiores molestias nesciunt, nostrum, libero culpa consequatur est alias quos! Maiores labore illo recusandae asperiores magnam, quis temporibus natus.</p>
         </div>
         <div className={styles.about__picture}>
             <Image 	fill preload={true} style={{ objectFit: 'cover' }}  quality={100} alt={"Mateusz skupiony podczas pracy"} src={'/focus.png'}></Image>
