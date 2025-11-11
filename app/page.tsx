@@ -1,11 +1,23 @@
+import { RightLine } from "@/components/RightLine/RightLine";
 import { LeftLine } from "@/components/LeftLine/LeftLine";
 import { NavSide } from "@/components/NavSide/NavSide";
+import { Nav } from "@/components/Nav/Nav";
+import { NavSmall } from "@/components/NavSmall/NavSmall";
+import { UIContextProvider } from "@/store/Ui-context";
+import About from "@/components/About/About";
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans overflow-hidden dark:bg-black">
-        <NavSide></NavSide>
-        <LeftLine></LeftLine>
+    <UIContextProvider>
 
-    </div>
+      <div className="main">
+          <Nav></Nav>
+          <About></About>
+          <NavSmall></NavSmall>
+          <NavSide></NavSide>
+          <LeftLine></LeftLine>
+          <RightLine></RightLine> 
+
+      </div>
+    </UIContextProvider>
   );
 }

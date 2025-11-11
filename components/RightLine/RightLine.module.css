@@ -1,0 +1,67 @@
+.rightLine{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 45px;
+    z-index: 1000;
+    width: 1px;
+    height: 100vh;
+
+}
+.rightLine__top{
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 1px;
+    background-color: rgba(255,255,255,0.2);
+    bottom: calc(100vh - (30px));
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.rightLine__bot{
+   position: absolute;
+    bottom: 0;
+    left: 10%;
+    width: 1px;
+    background-color: rgba(255,255,255,0.2);
+    top: calc(20px + 40px + 10px);
+    overflow: hidden;
+    pointer-events: none;
+}
+.rightLine__top::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-50%);
+    background-color: #fff;
+}
+.rightLine__mid::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-50%);
+    background-color: #fff;
+}
+.rightLine__bot::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    transform: translateX(-50%);
+    background-color: #fff;
+}
