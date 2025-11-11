@@ -1,0 +1,99 @@
+.leftLine{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 3%;
+    z-index: 1000;
+    width: 1px;
+    height: 100vh;
+
+}
+.leftLine__top{
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 1px;
+    background-color: rgba(255,255,255,0.2);
+    height: 2vh;
+    overflow: hidden;
+    pointer-events: none;
+}
+.leftLine__mid{
+    position: absolute;
+    top: 6%;
+    left: 10%;
+    width: 1px;
+    background-color: rgba(255,255,255,0.2);
+    height: 80vh;
+    overflow: hidden;
+    pointer-events: none;
+}
+.leftLine__bot{
+   position: absolute;
+    bottom: 0;
+    left: 10%;
+    width: 1px;
+    background-color: rgba(255,255,255,0.2);
+    height: 8vh;
+    overflow: hidden;
+    pointer-events: none;
+}
+.leftLine__top::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-50%);
+    background-color: #fff;
+}
+.leftLine__mid::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    transform: translateX(-50%);
+    background-color: #fff;
+}
+.leftLine__mid::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-50%);
+    background-color: #fff;
+}
+.leftLine__bot::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    transform: translateX(-50%);
+    background-color: #fff;
+}
+.leftLine__icon{
+    position: absolute;
+    bottom: 80px;
+    left: 10%;
+    width: 40px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.2);
+    height: 40px;
+    transform: translateX(-50%);
+
+}
