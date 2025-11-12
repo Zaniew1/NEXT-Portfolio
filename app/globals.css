@@ -36,9 +36,8 @@ body {
 }
 .main{
   display: flex;
-  min-height: 100vh;
   justify-content: center;
   align-items: flex-start;
-  overflow: hidden;
+  overflow-X: hidden;
   flex-direction: column;
 }
