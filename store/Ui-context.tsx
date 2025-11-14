@@ -14,7 +14,6 @@ export const UIContext = React.createContext<UIContextType>({
 
 export const UIContextProvider = (props: ContextPropsType) => {
   const [navPage, setNavPage] = useState<number>(1);
-  console.log(navPage)
  
   return (
     <UIContext.Provider
