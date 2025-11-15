@@ -3,7 +3,7 @@ import { Infinity } from 'lucide-react';
 import {useState } from "react"
 import styles from "./About.module.css"
 import Image from 'next/image'
-const About = () => {
+export const About = () => {
 
     const [switchText, setSwitchText]  = useState<number>(0);
     return <div className={styles.about}>
@@ -67,5 +67,3 @@ const About = () => {
         </div>
     </div>
 }
-
-export default  About

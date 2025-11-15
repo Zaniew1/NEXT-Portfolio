@@ -2,9 +2,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: calc(100vh - var(--topnav-height));
+    height: 100%;
     width: 100%;
-    margin-top: var(--topnav-height);
 }
 .about__text{
     width: 60%;
