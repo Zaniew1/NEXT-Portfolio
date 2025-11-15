@@ -1,0 +1,14 @@
+.cardscroll-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.cardscroll-page {
+  height: calc(100vh - var(--topnav-height));
+  margin-top:  var(--topnav-height);
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
