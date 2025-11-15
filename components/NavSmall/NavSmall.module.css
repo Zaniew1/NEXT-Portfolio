@@ -3,6 +3,7 @@
     top: 20%;
     left: 5%;
     display: flex;
+    z-index: 1000
 }
 .navsmall__info{
     display: flex;

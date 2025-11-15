@@ -17,23 +17,23 @@ export default function Home() {
 
       <div className="main">
           <Nav></Nav>
-          <CardScroll duration={1000}><div></div><div></div><div></div><div></div><div></div><div></div></CardScroll>
-          {/* <Layout>
-            <About></About>
-          </Layout> */}
-          <Layout>
-            <Projects></Projects>
-          </Layout>
-          <Layout>
-            <Tech></Tech>
-          </Layout>
-          <Layout>
-            <Experience></Experience>
-          </Layout>
-          <Layout>
-            <Contact></Contact>
-          </Layout>
-          
+          <CardScroll duration={700} >
+            <Layout>
+              <About></About>
+            </Layout>
+            <Layout>
+              <Projects></Projects>
+            </Layout>
+            <Layout>
+              <Tech></Tech>
+            </Layout>
+            <Layout>
+              <Experience></Experience>
+            </Layout>
+            <Layout>
+              <Contact></Contact>
+            </Layout>
+          </CardScroll>
           <NavSmall></NavSmall>
           <NavSide></NavSide>
           <LeftLine></LeftLine>

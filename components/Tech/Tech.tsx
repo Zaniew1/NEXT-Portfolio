@@ -1,10 +1,10 @@
 import styles from './Tech.module.css'
 export const Tech = () => {
         return (
-        <div className={styles.projects}>
-            <h1 className={styles.projects__header}>Technologie</h1 >
-            <div className={styles.projects__main}></div>
-            <div className={styles.projects__nav}></div>
+        <div className={styles.tech}>
+            <h1 className={styles.tech__header}>Technologie</h1 >
+            <div className={styles.tech__main}></div>
+            <div className={styles.tech__nav}></div>
         </div>
     )
 }

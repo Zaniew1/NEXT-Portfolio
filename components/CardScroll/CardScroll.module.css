@@ -1,14 +1,20 @@
-.cardscroll-container {
-  height: 100%;
-  width: 100%;
+.cardscroll__container {
+  height: 100vh;
+  width: 100vw;
   position: relative;
 }
 
-.cardscroll-page {
+.cardscroll__page {
   height: calc(100vh - var(--topnav-height));
   margin-top:  var(--topnav-height);
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
+  transition: transform 0.5s ease;
+
+}
+@keyframes slideUp {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-100vh); }
 }

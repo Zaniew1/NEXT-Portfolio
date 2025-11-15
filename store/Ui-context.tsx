@@ -8,12 +8,12 @@ export type UIContextType = {
   setNavPage: (number: number) => void;
 };
 export const UIContext = React.createContext<UIContextType>({
-    navPage: 1,
+    navPage: 0,
     setNavPage: () => {}
   });
 
 export const UIContextProvider = (props: ContextPropsType) => {
-  const [navPage, setNavPage] = useState<number>(1);
+  const [navPage, setNavPage] = useState<number>(0);
  
   return (
     <UIContext.Provider
