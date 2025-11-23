@@ -60,7 +60,6 @@
     z-index:2;
     transition: clip-path .6s cubic-bezier(.19,.33,.83,.67);
     transition-delay: .3s;
-
     clip-path: inset(0 0 0 100%);
 }
 .about__pixture__one__active{

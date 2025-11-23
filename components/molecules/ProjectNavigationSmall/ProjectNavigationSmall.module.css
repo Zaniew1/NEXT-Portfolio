@@ -1,0 +1,33 @@
+.smallnav__wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2em;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #161616;
+}
+.smallnav__wrapper__element{
+    position: relative;
+    font-size: 0.8em;
+    color: #454545 ;
+    padding: 0.3em 0.6em;
+    cursor: pointer;
+    transition: .4s ease-in-out;
+}
+.smallnav__wrapper__element__active{
+    color: #fff;
+}
+.smallnav__wrapper__element__active .smallnav__wrapper__element__span{
+    height: 1px;
+}
+.smallnav__wrapper__element__span{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 60%;
+    height: 0px;
+    background-color: var(--special-color);
+    transform: translateX(-50%);
+}

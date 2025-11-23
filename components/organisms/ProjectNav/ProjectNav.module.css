@@ -1,0 +1,104 @@
+.projectNav{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 auto;
+    width: 80%;
+}
+.projectNav__arrow__left{
+    margin-left: 8em;
+    padding: 0.2em;
+    cursor: pointer;
+}
+.projectNav__arrow__right{
+    transform: rotate(-180deg);
+    padding: 0.2em;
+    margin-right: 8em;
+    cursor: pointer;
+}
+.projectNav__arrow__left:hover{
+    color: var(--special-color);
+}
+.projectNav__arrow__right:hover{
+    color: var(--special-color);
+}
+.projectNav__text{
+    position: relative;
+    font-size: 0.8em;
+    font-weight: 400;
+    font-family: serif;
+    cursor: pointer;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-bottom: 0.2em;
+    margin: 0 6em;
+    text-align: center;
+}
+.projectNav__text__span{
+    position: absolute;
+    bottom: 0;
+    background-color: var(--special-color);
+    right: 0;
+    width: 100%;
+    height: 1px;
+    transition: .4s ease-in-out;
+}
+.projectNav__text:hover > .projectNav__text__span{
+    width: 0;
+}
+.projectNav__image{
+    width: 200px;
+    height: 130px;
+}
+
+.projectNav__wrapper{
+    position: relative;
+    width: 200px;
+    height: 130px;
+    border-radius: 10px 0 10px 0;
+    cursor: pointer;
+}
+.projectNav__wrapper__image{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 0 10px 0;
+}
+
+.projectNav__wrapper__left > .projectNav__wrapper__navigation{
+    right: 0;
+    transform: translate(50%, -50%);
+}
+.projectNav__wrapper__right > .projectNav__wrapper__navigation{
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+.projectNav__wrapper__left > .projectNav__wrapper__name{
+    right: 0;
+    transform: translate(80%, -50%);
+}
+.projectNav__wrapper__right > .projectNav__wrapper__name{
+    left: 0;
+    transform: translate(-80%, -50%);
+}
+.projectNav__wrapper__navigation{
+    position: absolute;
+    top: 50%;
+    background-color: var(--special-color);
+    padding: 0.2em 0.3em;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    color: #0a0a0a;
+    font-weight: 600;
+}
+
+.projectNav__wrapper__name{
+    position: absolute;
+    top: 80%;
+    background-color: #1e1e1e;
+    padding: 0.2em 0.4em;
+    border-radius: 10px 0 10px 0;
+
+}

@@ -1,0 +1,21 @@
+.letter {
+  display: inline-block;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}
+
+.letter span {
+  display: inline-block;
+  color: white;
+}
+
+.letter:hover span {
+  animation: whiteToGold 0.35s forwards;
+  animation-delay: calc(var(--i) * 0.01s);
+
+}
+
+@keyframes whiteToGold {
+  from { color: white; }
+  to   { color: #dd9933; }
+}

@@ -1,47 +1,50 @@
 "use client";
 
-import { useEffect, useState, ReactNode, useContext, useRef } from "react";
+import { useEffect, useState, ReactNode, useRef } from "react";
 import styles from './CardScroll.module.css'
-import { UIContext } from "@/store/Ui-context";
+import { NavIndexType } from '@/app/page';
+
 interface CardScrollProps {
-  children: ReactNode[];      // sekcje (każda = jedna strona)
-  duration?: number;          // czas trwania animacji
+  children: ReactNode[];      // sections - pages
+  duration?: number;         // aniumation time
 }
 
-export default function CardScroll({ children, duration = 800 }: CardScrollProps) {
+export default function CardScroll( { children,  duration = 800, navIndex, setNavIndex }: CardScrollProps & NavIndexType) {
   const [index, setIndex] = useState<number>(0);
   const  scrollLocked = useRef<boolean>(false);
   const count = children.length;
-  const { setNavPage } = useContext(UIContext);
-  const animating = useRef(false);
-useEffect(() => {
-  const handleWheel = (e: WheelEvent) => {
-    console.log(scrollLocked.current)
-    e.preventDefault();
-    if (scrollLocked.current) return;
-    scrollLocked.current = true;
-    
-    setTimeout(() => {
-      scrollLocked.current = false;
-    }, 700);
-    console.log(scrollLocked.current)
+  // handle nav change with navSmall and navRight
+  useEffect(() => {
+    setIndex(navIndex);
+  }, [navIndex]);
+  // handle page change on scroll
+  useEffect(() => {
+    const handleWheel = (e: WheelEvent) => {
+      console.log(scrollLocked.current)
+      e.preventDefault();
+      if (scrollLocked.current) return;
+      scrollLocked.current = true;
+      
+      setTimeout(() => {
+        scrollLocked.current = false;
+      }, 700);
+      console.log(scrollLocked.current)
 
-    setIndex(prev => {
-      let newIndex = prev;
+      setIndex(prev => {
+        let newIndex = prev;
 
-      if (e.deltaY > 0 && prev < count - 1) {
-        newIndex = prev + 1;
-      } else if (e.deltaY < 0 && prev > 0) {
-        newIndex = prev - 1;
-      }
-      // to jest BEZPIECZNE, bo jest w event handlerze, nie w renderze
-        requestAnimationFrame(() => {
-          setNavPage(newIndex);
-        });
+        if (e.deltaY > 0 && prev < count - 1) {
+          newIndex = prev + 1;
+        } else if (e.deltaY < 0 && prev > 0) {
+          newIndex = prev - 1;
+        }
+          requestAnimationFrame(() => {
+            setNavIndex(newIndex);
+          });
 
-      return newIndex;
-    });
-  };
+        return newIndex;
+      });
+    };
 
   const handleTouchMove = (e: TouchEvent) => {
     e.preventDefault();
@@ -54,7 +57,7 @@ useEffect(() => {
     window.removeEventListener("wheel", handleWheel);
     window.removeEventListener("touchmove", handleTouchMove);
   };
-}, [count, setNavPage]); // ZOSTAJE TYLKO count — zero funkcji, zero indexu
+}, [count, setNavIndex]); 
 
   return (
     <div className={styles.cardscroll__container}>

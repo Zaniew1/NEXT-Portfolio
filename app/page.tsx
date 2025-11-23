@@ -1,29 +1,36 @@
-import { RightLine } from "@/components/RightLine/RightLine";
-import { LeftLine } from "@/components/LeftLine/LeftLine";
-import { NavSide } from "@/components/NavSide/NavSide";
-import { Nav } from "@/components/Nav/Nav";
-import { NavSmall } from "@/components/NavSmall/NavSmall";
-import { UIContextProvider } from "@/store/Ui-context";
-import {About} from "@/components/About/About";
-import {Contact} from "@/components/Contact/Contact";
-import { Layout } from "@/components/Layout/Layout";
-import { Tech } from "@/components/Tech/Tech";
-import { Projects } from "@/components/Projects/Projects";
-import { Experience } from "@/components/Experience/Experience";
-import CardScroll from "@/components/CardScroll/CardScroll";
+"use client"
+import { RightLine } from "@/components/molecules/RightLine/RightLine";
+import { LeftLine } from "@/components/molecules/LeftLine/LeftLine";
+import { NavSide } from "@/components/organisms/NavSide/NavSide";
+import { Nav } from "@/components/organisms/Nav/Nav";
+import { NavSmall } from "@/components/organisms/NavSmall/NavSmall";
+import {About} from "@/components/templates/About/About";
+import {Contact} from "@/components/templates/Contact/Contact";
+import { Layout } from "@/components/molecules/Layout/Layout";
+import { Tech } from "@/components/templates/Tech/Tech";
+import { Projects } from "@/components/templates/Projects/Projects";
+import { Experience } from "@/components/templates/Experience/Experience";
+import CardScroll from "@/components/molecules/CardScroll/CardScroll";
+import { useState } from "react";
+export type NavIndexType = {
+    navIndex: number,
+    setNavIndex: (index: number)=> void
+}
+
 export default function Home() {
+  const [navIndex, setNavIndex] = useState<number>(0);
+  console.log(navIndex)
   return (
-    <UIContextProvider>
 
       <div className="main">
           <Nav></Nav>
-          <CardScroll duration={700} >
-            <Layout>
+          <CardScroll navIndex={navIndex} setNavIndex={setNavIndex} duration={700} >
+            {/* <Layout>
               <About></About>
             </Layout>
             <Layout>
               <Projects></Projects>
-            </Layout>
+            </Layout> */}
             <Layout>
               <Tech></Tech>
             </Layout>
@@ -34,12 +41,11 @@ export default function Home() {
               <Contact></Contact>
             </Layout>
           </CardScroll>
-          <NavSmall></NavSmall>
-          <NavSide></NavSide>
+          <NavSmall navIndex={navIndex} setNavIndex={setNavIndex}></NavSmall>
+          <NavSide navIndex={navIndex} setNavIndex={setNavIndex}></NavSide>
           <LeftLine></LeftLine>
           <RightLine></RightLine> 
 
       </div>
-    </UIContextProvider>
   );
 }
