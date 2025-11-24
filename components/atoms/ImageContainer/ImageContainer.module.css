@@ -4,3 +4,12 @@
     height: 100%;
     overflow: hidden;
 }
+.imageContainer > img {
+  position: absolute; /* makes image stay still */
+  top: 0;
+  left: 0;
+  width: 100%;        /* or natural width */
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}

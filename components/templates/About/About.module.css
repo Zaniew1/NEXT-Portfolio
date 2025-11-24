@@ -56,26 +56,25 @@
     width: 100%;
     height: 100%;
     top: 0;
-    left: 0;
+    right: 0;
     z-index:2;
-    transition: clip-path .6s cubic-bezier(.19,.33,.83,.67);
-    transition-delay: .3s;
-    clip-path: inset(0 0 0 100%);
+    /* transition: clip-path .6s cubic-bezier(.19,.33,.83,.67); */
+    transform-origin: right;
 }
 .about__pixture__one__active{
     z-index:4;
-    clip-path: inset(0 0 0 0);
 
 }
 .about__picture__two{
     position: absolute;
     width: 100%;
     height: 100%;
+    transform-origin: right;
     top: 0;
-    left: 0;
+    right: 0;
     z-index:2;
-    clip-path: inset(0 0 0 100%);
-    transition: clip-path .6s cubic-bezier(.19,.33,.83,.67);
+    /* clip-path: inset(0 0 0 100%); */
+    /* transition: clip-path .6s cubic-bezier(.19,.33,.83,.67); */
 }
 .about__pixture__two__active{
     clip-path: inset(0 0 0 0);

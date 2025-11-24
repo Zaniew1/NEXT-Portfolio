@@ -3,6 +3,7 @@
 import { useEffect, useState, ReactNode, useRef } from "react";
 import styles from './CardScroll.module.css'
 import { NavIndexType } from '@/app/page';
+import { motion } from "motion/react";
 
 interface CardScrollProps {
   children: ReactNode[];      // sections - pages
@@ -65,9 +66,11 @@ export default function CardScroll( { children,  duration = 800, navIndex, setNa
         const isTop = i === index;
 
         return (
-          <div
+          <motion.div
             key={i}
             className={styles.cardscroll__page}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             style={{
               zIndex: children.length - i,
               transform: isTop ? `translateY(0)` : `translateY(${(i - index) * 100}vh)`,
@@ -78,7 +81,7 @@ export default function CardScroll( { children,  duration = 800, navIndex, setNa
             }}
           >
             {child}
-          </div>
+          </motion.div>
         );
       })}
     </div>

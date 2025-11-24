@@ -25,12 +25,12 @@ export default function Home() {
       <div className="main">
           <Nav></Nav>
           <CardScroll navIndex={navIndex} setNavIndex={setNavIndex} duration={700} >
-            {/* <Layout>
+            <Layout>
               <About></About>
             </Layout>
             <Layout>
               <Projects></Projects>
-            </Layout> */}
+            </Layout>
             <Layout>
               <Tech></Tech>
             </Layout>

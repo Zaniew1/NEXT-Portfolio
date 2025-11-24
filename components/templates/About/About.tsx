@@ -3,6 +3,8 @@ import { Infinity } from 'lucide-react';
 import {useState } from "react"
 import styles from "./About.module.css"
 import Image from 'next/image'
+import { AnimatePresence, motion } from "motion/react"
+
 export const About = () => {
 
     const [switchText, setSwitchText]  = useState<number>(0);
@@ -57,13 +59,29 @@ export const About = () => {
             </div>
         </div>
         <div className={`${styles.about__picture}`}>
-            <div className={` ${styles.about__picture__one} ${!switchText ? styles.about__pixture__one__active : ""}`}>
-                <Image 	fill preload={true} style={{ objectFit: 'cover' }}  quality={100} alt={"Mateusz skupiony podczas pracy"} src={'/focus.png'}></Image>
+            <AnimatePresence  >
 
-            </div>
-            <div className={` ${styles.about__picture__two} ${switchText ? styles.about__pixture__two__active : ""}`}>
-                <Image 	fill preload={true} style={{ objectFit: 'cover' }}  quality={100} alt={"Mateusz skupiony podczas pracy"} src={'/focus2.png'}></Image>
-            </div>
+                {!switchText && <motion.div 
+                                key="img1"
+                                className={` ${styles.about__picture__one} `}
+                                initial={{ width: 0,  }}
+                                animate={{ width: "100%" }}
+                                exit={{ width: 0 }}
+                                transition={{duration: 0.7}}>
+                                <Image 	fill preload={true} style={{ objectFit: 'cover' }}  quality={100} alt={"Mateusz skupiony podczas pracy"} src={'/focus.png'}></Image>
+
+                </motion.div>}
+                {switchText && <motion.div 
+                                className={` ${styles.about__picture__two} `}
+                                key="img2"
+                                initial={{ width: 0 }}
+                                animate={{ width: "100%" }}
+                                exit={{ width: 0 }}
+                                transition={{ duration: 0.7 }}
+                                >
+                                <Image 	fill preload={true} style={{ objectFit: 'cover' }}  quality={100} alt={"Mateusz skupiony podczas pracy"} src={'/focus2.png'}></Image>
+                </motion.div>}
+            </AnimatePresence>
         </div>
     </div>
 }

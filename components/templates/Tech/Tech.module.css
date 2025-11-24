@@ -18,12 +18,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
     margin-top: 3em;
 }
 .tech__main__nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 0.5em 1em;
+    margin-bottom: 2em;
 }
 .tech__main__nav__element{
     position: relative;
@@ -40,12 +44,16 @@
 .tech__main__nav__element__span{
     position: absolute;
     bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 0;
     height: 1px;
     background-color: var(--special-color);
     transition: .3s ease-in-out;
+
 }
 .tech__main__nav__element__active .tech__main__nav__element__span{
+    margin: 0 auto;
     width: 60%;
 }
 .tech__main__technologies{
@@ -54,18 +62,16 @@
     height: 100%;
     padding: 0.5em 1em;
     margin-left: 2em;
-    transition: .3s ease-in-out;
+    overflow: hidden;
 }
 .tech__main__technologies__element{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 1em 1em;
+    padding: 0.5em 1em;
     font-size: 1.4em;
     text-transform: uppercase;
     letter-spacing: 1px;
-    transition: .3s ease-in-out;
-
 }
 .tech__main__technologies__element__icon{
     margin-right: 2em;
