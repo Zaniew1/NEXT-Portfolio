@@ -95,6 +95,16 @@ export const techData: TechDataType = [
                 name: "Redis",
                 color:{color: "#DC382D"}
             },
+            {
+                icon: <SiMongoose/>,
+                name: "Mongoose",
+                color:{color: "#880000"}
+            },
+            {
+                icon: <SiPrisma />,
+                name: "Prisma",
+                color:{color: "#0C4A6E"}
+            },
           
         ]
     },
@@ -165,20 +175,11 @@ export const techData: TechDataType = [
                 name: "Zod",
                 color:{color: "#6F2CAC"}
             },
-            {
-                icon: <SiMongoose/>,
-                name: "Mongoose",
-                color:{color: "#880000"}
-            },
-            {
-                icon: <SiPrisma />,
-                name: "Prisma",
-                color:{color: "#0C4A6E"}
-            },
+      
             {
                 icon: <SiFfmpeg  />,
                 name: "FFMPEG",
-                color: { color:  "#0063C1"}
+                color: { color:  "#388E3C"}
             },
             {
                 icon: <SiJsonwebtokens />,
@@ -192,4 +193,6 @@ export const techData: TechDataType = [
             },
         ]
     }
+     
+
 ];

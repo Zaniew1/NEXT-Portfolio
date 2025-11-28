@@ -39,6 +39,7 @@
     width: 60%;           /* image stays full width */
     position: relative;
     cursor: pointer;
+    overflow: hidden;
 }
 .projects__main__view__mask{
     position: absolute;
