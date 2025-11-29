@@ -38,7 +38,6 @@
     font-size: 1.2em;
     font-weight: 600;
     padding: 0.5em 0;
-    text-transform: uppercase;
     letter-spacing: 1px;
 }
 .card__text__tech{
@@ -68,6 +67,7 @@
  
     list-style-type: disc;
     padding: 0.5em 0;
+
 }
 .card__text__list__element{
     font-size: 0.9em;

@@ -31,7 +31,6 @@
     letter-spacing: 1px;
     color: #b1b0b0;
     font-size: 0.8em;
-    font-family: "IBM Plex Sans";
     font-weight: 400;
 }
 .contact__form__line__input{
@@ -123,7 +122,6 @@ input:-webkit-autofill::first-line {
     letter-spacing: 1px;
     font-size: 0.8em;
     transition: .3s ease-in-out;
-    font-family: "IBM Plex Sans";
   
 }
 .contact__form__submit__input__active{ 

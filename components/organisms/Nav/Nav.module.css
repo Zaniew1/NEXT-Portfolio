@@ -12,14 +12,12 @@
 }
 .nav__text{
     text-transform: uppercase;
-    font-family: "IBM Plex Sans";
     font-weight: 400;
     margin-left: 40px;
     color:#b1b0b0 ;
 }
 .nav__cv{
     text-transform: uppercase;
-    font-family: "IBM Plex Sans";
     font-weight: 400;
     color:#b1b0b0 ;
     margin-right: 40px;
