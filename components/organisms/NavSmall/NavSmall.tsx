@@ -20,8 +20,8 @@ export const NavSmall = (props:NavIndexType) => {
                 <div className={styles.navsmall__info__title}>{navData[props.navIndex].title}</div>
             </div>
             <div className={styles.navsmall__arrows}>
-                <div onClick={()=>decrementPageNumber(props.navIndex)} className={`${styles.navsmall__arrow} ${props.index == 0 ? `${styles.navsmall__arrow__deactivated}` :""}`}><ChevronUp/></div>
-                <div onClick={()=>incrementPageNumber(props.navIndex)} className={`${styles.navsmall__arrow} ${props.index == 4 ? `${styles.navsmall__arrow__deactivated}` :""}`}><ChevronDown/></div>
+                <div onClick={()=>decrementPageNumber(props.navIndex)} className={`${styles.navsmall__arrow} ${props.navIndex == 0 ? `${styles.navsmall__arrow__deactivated}` :""}`}><ChevronUp/></div>
+                <div onClick={()=>incrementPageNumber(props.navIndex)} className={`${styles.navsmall__arrow} ${props.navIndex == 4 ? `${styles.navsmall__arrow__deactivated}` :""}`}><ChevronDown/></div>
             </div>
         </div>
     )
