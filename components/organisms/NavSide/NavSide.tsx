@@ -1,6 +1,5 @@
 "use client"
 import styles from "./NavSide.module.css"
-import { useContext } from 'react';
 import {navData} from '../../../data/navData'
 import { NavIndexType } from "@/app/page";
 export const NavSide = (props: NavIndexType) => {
