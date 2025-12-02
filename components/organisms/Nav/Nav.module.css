@@ -12,13 +12,13 @@
 }
 .nav__text{
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 300;
     margin-left: 40px;
     color:#b1b0b0 ;
 }
 .nav__cv{
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 300;
     color:#b1b0b0 ;
     margin-right: 40px;
     transition: .2s ease-in-out;
