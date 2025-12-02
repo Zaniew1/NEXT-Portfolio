@@ -17,21 +17,11 @@ export const About = () => {
             </div>
             <div className={styles.about__text__wrapper}>
                 <p className={`${styles.about__text__paragraph} ${switchText == 0 ? styles.about__text__paragraph__fromtop: styles.about__text__paragraph__hidetop}`}> 
-                                        Jestem programistą fullstack z 3-letnim
-                                        doświadczeniem w pracy nad rozwojem produktu
-                                        SaaS zajmującego się dystrybucją i wyświetlaniem
-                                        reklam. Specjalizuję się w tworzeniu skalowalnych
-                                        i efektywnych aplikacji webowych. Szukam
-                                        nowych wyzwań, które pozwolą mi rozwijać swoje
-                                        umiejętności w stacku technologicznym MERN
-                                        (MongoDB, Express, React, Node.js) i przyczynić
-                                        SaaS zajmującego się dystrybucją i wyświetlaniem
-                                        reklam. Specjalizuję się w tworzeniu skalowalnych
-                                        i efektywnych aplikacji webowych. Szukam
-                                        nowych wyzwań, które pozwolą mi rozwijać swoje
-                                        umiejętności w stacku technologicznym MERN
-                                        (MongoDB, Express, React, Node.js) i przyczynić
-                                        się do realizacji innowacyjnych projektów.</p>
+                    Cześć! Jestem fullstack developerem z 3-letnim stażem, a ostatnio intensywnie pracowałem nad produktem SaaS z branży reklamy (dystrybucja i wyświetlanie).
+                    Można powiedzieć, że świetnie ogarniam, jak tworzyć skalowalne i naprawdę wydajne aplikacje webowe.
+                    Teraz szukam miejsca, gdzie mógłbym skoczyć na głęboką wodę i w pełni rozwinąć skrzydła w technologiach MERN (MongoDB, Express, React, Node.js).
+                    <br/>Cel? Działać przy innowacyjnych projektach, które rzeczywiście mają sens i gdzie mogę się przyczynić do stworzenia czegoś fajnego i efektywnego.
+                    Jestem gotów na nowe wyzwania! Chętnie dołączę do zespołu, który ceni sobie dobrą robotę i daje przestrzeń na rozwój.</p>
                 <div className={`${styles.about__text__icons} ${switchText == 0 ? styles.about__text__paragraph__show: styles.about__text__paragraph__hidebottom}`}>
                     <div className={styles.about__text__icons__wrapper}>
                         <span className={styles.about__text__icons__wrapper__number}>#1</span>
@@ -58,7 +48,7 @@ export const About = () => {
                             W szachach uwielbiam strategiczne myślenia i przewidywanie kilka ruchów w przód. Moim ulubionym otwarciem jest Obrona królewsko-indyjska.
                         </p>
                         <p className={styles.about__text__paragraph__text__highlighted}>
-                            Piesze wędrówki po górach
+                            Wędrówki po górach
                         </p>
                         <p className={styles.about__text__paragraph__text}>
                             Moim ulubionym miejscem na ziemi są Tatry, w każde wakacje i ferie zimowe staram się pojechać choćby na 1 dzień by móc sie zresetować w górach. Zdobyłem już 80% najwyższych szczytów Tatr. Zamierzam niedługo zdobyć je wszystkie (Gotta catch &apos;em all :D)

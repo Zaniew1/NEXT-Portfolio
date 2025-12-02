@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 3em;
+    margin: 1em 0;
     position: relative;
 }
 .projectname__wrapper__mask{
@@ -60,4 +60,10 @@
     transition: .3s ease-in-out;
     height: 1px;
     background-color: var(--special-color);
+}
+
+@media screen and (width >= 768px) {
+    .projectname__wrapper{
+        margin: 3em 2em 0 0 ;
+    }
 }

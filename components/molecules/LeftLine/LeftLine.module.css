@@ -1,4 +1,5 @@
 .leftLine{
+    display: none;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -150,4 +151,9 @@
 .leftLine__socials__icon:hover + .leftLine__socials__unwrap{
     visibility:  visible;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+@media screen and (width >= 768px) {
+    .leftLine{
+        display: flex;
+    }
 }

@@ -7,14 +7,14 @@
     width: 80%;
 }
 .projectNav__arrow__left{
-    margin-left: 8em;
+    margin-left: 0.5em;
     padding: 0.2em;
     cursor: pointer;
 }
 .projectNav__arrow__right{
     transform: rotate(-180deg);
     padding: 0.2em;
-    margin-right: 8em;
+    margin-right: 0.5em;
     cursor: pointer;
 }
 .projectNav__arrow__left:hover{
@@ -25,7 +25,7 @@
 }
 .projectNav__text{
     position: relative;
-    font-size: 0.8em;
+    font-size: 0.7em;
     font-weight: 300;
     font-family: serif;
     cursor: pointer;
@@ -33,7 +33,7 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     padding-bottom: 0.2em;
-    margin: 0 6em;
+    margin: 0 1em;
     text-align: center;
 }
 .projectNav__text__span{
@@ -54,6 +54,7 @@
 }
 
 .projectNav__wrapper{
+    display: none;
     position: relative;
     width: 200px;
     height: 130px;
@@ -125,4 +126,34 @@
     padding: 0.2em 0.4em;
     border-radius: 10px 0 10px 0;
 
+}
+@media screen and (width >= 768px) {
+    .projectNav__text{
+        margin: 0 2em;
+        font-size: 0.7em;
+    }
+    .projectNav__wrapper{
+        display: block;
+    }
+    .projectNav__arrow__left{
+        margin-left: 5em;
+    }
+    .projectNav__arrow__right{
+        margin-right: 5em;
+    }
+}
+@media screen and (width >= 1240px) {
+    .projectNav__text{
+        margin: 0 6em;
+        font-size: 0.8em;
+    }
+    .projectNav__wrapper{
+        display: block;
+    }
+    .projectNav__arrow__left{
+        margin-left: 8em;
+    }
+    .projectNav__arrow__right{
+        margin-right: 8em;
+    }
 }

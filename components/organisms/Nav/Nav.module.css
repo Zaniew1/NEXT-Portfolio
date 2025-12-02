@@ -9,6 +9,55 @@
     height: var(--topnav-height);
     background-color: var(--background);
     z-index: 500;
+    font-size: 0.7em;
+    min-width: 320px;
+}
+.nav__text{
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-left: 20px;
+    color:#b1b0b0 ;
+}
+.nav__cv{
+    display: none;
+    text-transform: uppercase;
+    font-weight: 300;
+    color:#b1b0b0 ;
+    margin-right: 20px;
+    transition: .2s ease-in-out;
+}
+.nav__cv::after{
+    content: "CV"
+}
+.nav__cv:hover{
+    color: var(--special-color)
+}
+
+@media screen and (width >= 768px) {
+    .nav__text{
+        margin-left: 40px;
+
+    }
+    .nav__cv{
+        display: flex;
+        margin-right: 40px;
+    }
+    .nav__cv::after{
+    content: "Pobierz CV"
+}
+}
+
+/* .nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: var(--topnav-height);
+    background-color: var(--background);
+    z-index: 500;
 }
 .nav__text{
     text-transform: uppercase;
@@ -25,4 +74,4 @@
 }
 .nav__cv:hover{
     color: var(--special-color)
-}
+} */

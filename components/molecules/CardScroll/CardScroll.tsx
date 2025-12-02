@@ -20,6 +20,7 @@ export default function CardScroll( { children,  duration = 800, navIndex, setNa
   }, [navIndex]);
   // handle page change on scroll
   useEffect(() => {
+    if (window.innerWidth <= 768) return;
     const handleWheel = (e: WheelEvent) => {
       e.preventDefault();
       if (scrollLocked.current) return;

@@ -1,10 +1,13 @@
 import Link from "next/link";
 import styles from "./Nav.module.css";
+import { Burger } from "@/components/molecules/Burger/Burger";
+
 export const Nav = () =>{
     return(
         <nav className={styles.nav}>
             <Link href="/" className={styles.nav__text}>Mateusz Zaniewski - FullStack Developer</Link>
-            <Link  download href="/Mateusz Zaniewski FullStack CV POL.pdf" className={styles.nav__cv}>Pobierz CV</Link>
+            <Link  download href="/Mateusz Zaniewski FullStack CV POL.pdf" className={styles.nav__cv}></Link>
+            <Burger></Burger>
         </nav>
     )
 

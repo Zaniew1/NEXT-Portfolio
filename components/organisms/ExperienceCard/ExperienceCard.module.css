@@ -1,4 +1,5 @@
-.card{
+.card{ 
+    transform: scale(0.5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,4 +72,19 @@
 }
 .card__text__list__element{
     font-size: 0.9em;
+}
+
+@media screen and (width >= 500px) {
+    .card{
+        
+        transform: scale(0.7);
+    }
+   
+}
+@media screen and (width >= 768px) {
+    .card{
+        
+        transform: scale(1);
+    }
+   
 }

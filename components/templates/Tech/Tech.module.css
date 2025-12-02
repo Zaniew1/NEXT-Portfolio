@@ -18,14 +18,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    transform: scale(0.8);
+    flex-direction: row;
     width: 100%;
-    margin-top: 3em;
+    margin-top: 0em;
 }
 .tech__main__nav{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
     color: #999;
     padding: 0.5em 1em;
     margin-bottom: 2em;
@@ -59,21 +61,70 @@
 }
 .tech__main__technologies{
     border: 1px solid #fff3;
-    width: 60%;
     height: 100%;
+    
     padding: 0.5em 1em;
     margin-left: 2em;
     overflow: hidden;
+    min-width: 90px;
+    
 }
 .tech__main__technologies__element{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 0.5em 1em;
+    text-align: center;
+    padding: .9em 1em;
     font-size: 1.4em;
     letter-spacing: 1px;
     color: #ddd;
 }
-.tech__main__technologies__element__icon{
-    margin-right: 2em;
+.tech__main__technologies__element__name{
+    display: none;
+    text-align: left;
+}
+
+@media screen and (width >= 500px) {
+    .tech__main__technologies__element__icon{
+        margin-right: 2em;
+
+    }
+    .tech__main__technologies__element__name{
+        display: block;
+        font-size: 0.8em;
+    }
+   
+}
+@media screen and (width >= 768px) {
+    .tech__main{
+        flex-direction: column;
+        transform: scale(1);
+        margin-top: 3em;
+    }
+    .tech__main__technologies{
+        width: 60%;
+    }
+    .tech__main__nav{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .tech__main__nav__element{
+        font-size: 0.8em;
+    }
+}
+@media screen and (width >= 900px) {
+    .tech__main__nav__element{
+        font-size: 1em;
+    }
+}
+@media screen and (width >= 1240) {
+    .tech__main__nav__element{
+        font-size: 1.2em;
+    }
+}
+@media screen and (width >= 1420) {
+    .tech__main__nav__element{
+        font-size: 1.4em;
+    }
 }

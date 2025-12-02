@@ -2,7 +2,7 @@
     position: fixed;
     top: 20%;
     left: 5%;
-    display: flex;
+    display: none;
     z-index: 1000
 }
 .navsmall__info{
@@ -41,4 +41,10 @@
 .navsmall__arrow__deactivated{
     pointer-events: none;
     color: gray;
+}
+
+@media screen and (width >= 768px) {
+    .navsmall{
+        display: flex;
+    }
 }

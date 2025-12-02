@@ -27,7 +27,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Lexend", "sans-serif";
+  font-family: "Lexend", Roboto, sans-serif ;
   font-weight: 300;
 }
 body {
@@ -41,7 +41,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  overflow-X: hidden;
+  overflow-x: hidden;
   flex-direction: column;
   height: 100%;
   width: 100%;

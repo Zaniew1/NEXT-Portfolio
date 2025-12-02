@@ -6,9 +6,7 @@ export const Experience = () => {
         return (
         <div className={styles.experience}>
             <h1 className={styles.experience__header}>Doświadczenie</h1 >
-            <div  className="slider-container">
-                    <ExperienceCard data={experienceData[0]} />
-            </div>
+            <ExperienceCard data={experienceData[0]} />
             <div className={styles.experience__nav}></div>
         </div>
     )
