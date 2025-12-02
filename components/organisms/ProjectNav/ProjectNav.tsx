@@ -49,7 +49,6 @@ export const ProjectNav = (props: ProjectNavType) =>{
             props.setIndex(handleNext());
         }, 700);
     }
-    console.log(projectData[handlePrev()].images[0])
     return(
         <div className={styles.projectNav}>
 

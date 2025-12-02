@@ -21,7 +21,6 @@ export default function CardScroll( { children,  duration = 800, navIndex, setNa
   // handle page change on scroll
   useEffect(() => {
     const handleWheel = (e: WheelEvent) => {
-      console.log(scrollLocked.current)
       e.preventDefault();
       if (scrollLocked.current) return;
       scrollLocked.current = true;
@@ -29,7 +28,6 @@ export default function CardScroll( { children,  duration = 800, navIndex, setNa
       setTimeout(() => {
         scrollLocked.current = false;
       }, 700);
-      console.log(scrollLocked.current)
 
       setIndex(prev => {
         let newIndex = prev;

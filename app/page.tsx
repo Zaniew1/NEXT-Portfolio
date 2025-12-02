@@ -19,7 +19,6 @@ export type NavIndexType = {
 
 export default function Home() {
   const [navIndex, setNavIndex] = useState<number>(0);
-  console.log(navIndex)
   return (
 
       <div className="main">
