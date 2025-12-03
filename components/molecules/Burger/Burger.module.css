@@ -8,18 +8,14 @@
   cursor: pointer;
   margin-right: 1em;
   z-index: 4;
-
 }
-
-
 .burger {
   position: relative;
   background-color: #fff;
   width: 30px;
   height: 2px;
-   z-index: 2;
+  z-index: 2;
   cursor: pointer;
-
 }
 .burger::before {
   content: "";
@@ -45,7 +41,6 @@
   background-color: #fff;
   height: 0;
 }
-
 .burger__active.burger::after {
   transform: rotate(45deg);
 }
@@ -53,9 +48,8 @@
   transform: rotate(135deg);
 }
 
-
 @media screen and (width >= 768px) {
-    .burger{
+    .wrapper__burger{
        display: none;
     }
 }
