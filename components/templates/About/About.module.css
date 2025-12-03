@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: column;
     height: 100%;
     width: 100%;
 }
@@ -53,9 +54,9 @@
 
 
 .about__picture{
-    display: none;
+    display: flex;
     position: relative;
-    width: 0;
+    width: 90%;
     height: 100%;
 }
 .about__picture__one{
@@ -166,6 +167,9 @@
 
 
 @media screen and (width >= 768px) {
+    .about{
+        flex-direction: row;
+    }
     .about__text__switch{
         margin-top: 1em;
     }
