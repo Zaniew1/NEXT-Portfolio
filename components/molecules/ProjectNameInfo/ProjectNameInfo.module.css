@@ -26,9 +26,12 @@
     margin: 0.6em 0;
 }
 .projectname__wrapper__info__index{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #fff;
     padding: 0 0.2em;
-    font-size: 2.4em;
+    font-size: 2em;
     color: #1e1e1e;
     font-weight: 300;
     letter-spacing: 2px;
@@ -37,7 +40,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2em;
+    font-size: 1.6em;
     padding: 0 0.5em 0 0.7em ;
     background-color: #1e1e1e;
     color: #ededed;
@@ -65,5 +68,11 @@
 @media screen and (width >= 768px) {
     .projectname__wrapper{
         margin: 3em 2em 0 0 ;
+    }
+    .projectname__wrapper__info__index{
+        font-size: 2.4em;
+    }
+    .projectname__wrapper__info__name{
+        font-size: 2em;
     }
 }

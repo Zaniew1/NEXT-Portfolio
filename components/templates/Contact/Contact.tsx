@@ -43,7 +43,7 @@ export const Contact = () => {
         event.preventDefault();
     }
     return (
-        <div className={styles.contact}>
+        <div className={styles.contact} id={"contact"}>
             <form className={styles.contact__form} onSubmit={sendText}>
                 <div className={styles.contact__form__line}>
                     <label htmlFor='form__name' className={styles.contact__form__line__label}>Imię</label>

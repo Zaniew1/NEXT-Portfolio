@@ -1,0 +1,81 @@
+.navmobile{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    transition: .3s ease-in-out;
+    background-color: #131313;
+    padding-bottom:  3em;
+     transform: scaleY(0);
+    transform-origin: top;
+}
+.navmobile__active{
+    transform: scaleY(1);
+}
+.navmobile__active .navmobile__list{
+    opacity: 1;
+}
+.navmobile__active .navmobile__social{
+    opacity: 1;
+}
+.navmobile__active .navmobile__cv{
+    opacity: 1;
+}
+.navmobile__list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    width: 100%;
+    margin: 2em 0 1em 0;
+    font-size: 1.6em;
+    transition: .2s ease-in;
+}
+.navmobile__list__item{
+    cursor: pointer;
+    transition: .3s ease-in-out;
+    padding: 1em 0;
+}
+.navmobile__list__item:hover{
+    color: var(--special-color);
+}
+.navmobile__social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: .2s ease-in;
+    color: var(--special-color);
+
+}
+.navmobile__social__icon{
+    padding: 0 2em;
+}
+.navmobile__social__icon > svg{
+    width: 3em;
+    height: 3em;
+}
+
+.navmobile__cv{
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: 300;
+    color:#b1b0b0 ;
+    margin: 2em 0;
+    font-size: 2.4em;
+    transition: .2s ease-in-out;
+}
+.navmobile__cv::after{
+    content: "Pobierz CV"
+}
+.navmobile__cv:hover{
+    color: var(--special-color)
+}
+@media screen and (width >= 768px) {
+    .navmobile{
+       display: none;
+    }
+}

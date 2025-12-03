@@ -16,6 +16,7 @@
   height: 2px;
   z-index: 2;
   cursor: pointer;
+  transition: height 0.1s ease;
 }
 .burger::before {
   content: "";

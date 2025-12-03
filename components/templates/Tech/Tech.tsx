@@ -6,7 +6,7 @@ import {  motion } from "motion/react"
 export const Tech = () => {
     const [techIndex, setTechIndex]= useState<number>(0)
         return (
-        <div className={styles.tech}>
+        <div className={styles.tech} id={"tech"}>
             <h1 className={styles.tech__header}>Technologie</h1 >
             <div className={styles.tech__main}> 
                 <div className={styles.tech__main__nav}>

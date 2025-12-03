@@ -8,7 +8,7 @@ import { AnimatePresence, motion } from "motion/react"
 export const About = () => {
 
     const [switchText, setSwitchText]  = useState<number>(0);
-    return <div className={styles.about}>
+    return <div className={styles.about} id={"about"}>
         <div className={styles.about__text}>
             <div className={styles.about__text__switch}>
                 <p onClick={()=>setSwitchText(0)} className={`${styles.about__text__switch__item} ${switchText === 0 ? `${styles.about__text__switch__item__active}`: ""}`}>Kim jestem</p>

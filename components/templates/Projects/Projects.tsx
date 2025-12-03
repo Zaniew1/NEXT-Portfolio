@@ -13,7 +13,7 @@ export const Projects = () => {
   const [isAnimating, setAnimating] = useState<number>(0);
 
     return (
-        <div className={styles.projects}>
+        <div className={styles.projects} id={"projects"}>
             <h1 className={styles.projects__header}>Projekty</h1 >
             <div className={styles.projects__main}>
                 <div className={styles.projects__main__navigation}>
