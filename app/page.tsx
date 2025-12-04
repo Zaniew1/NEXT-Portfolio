@@ -13,8 +13,8 @@ import { Experience } from "@/components/templates/Experience/Experience";
 import CardScroll from "@/components/molecules/CardScroll/CardScroll";
 import { useState } from "react";
 export type NavIndexType = {
-    navIndex: number,
-    setNavIndex: (index: number)=> void
+    navIndex?: number,
+    setNavIndex?: (index: number)=> void
 }
 
 export default function Home() {
