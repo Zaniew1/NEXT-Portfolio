@@ -4,12 +4,15 @@ import styles from "./Nav.module.css";
 import { Burger } from "@/components/molecules/Burger/Burger";
 import { NavMobile } from "../NavMobile/NavMobile";
 import { useState } from "react";
-import { NavIndexType } from "@/app/page";
+export type NavIndexTypeOptional = {
+    navIndex?: number,
+    setNavIndex?: (index: number)=> void
+}
 export type MobileNavPropsType = {
     active: boolean,
     setActive: (active:boolean)=>void 
 }
-export const Nav = (props: NavIndexType) =>{
+export const Nav = (props: NavIndexTypeOptional) =>{
     const [burgerActive, setBurgerActive] = useState<boolean>(false)
     return(
         <nav className={styles.nav}>

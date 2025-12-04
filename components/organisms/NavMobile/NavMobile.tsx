@@ -1,9 +1,8 @@
 import Link from 'next/link';
-import { MobileNavPropsType } from '../Nav/Nav'
+import { MobileNavPropsType, NavIndexTypeOptional } from '../Nav/Nav'
 import styles from './NavMobile.module.css'
 import { Linkedin, Github } from 'lucide-react';
-import { NavIndexType } from "@/app/page";
-export const NavMobile = (props: MobileNavPropsType & NavIndexType)=>{
+export const NavMobile = (props: MobileNavPropsType & NavIndexTypeOptional)=>{
     const sectionToIndex: Record<string, number> = {
         about: 0,
         projects: 1,
@@ -15,7 +14,9 @@ export const NavMobile = (props: MobileNavPropsType & NavIndexType)=>{
         props.setActive(false);
         setTimeout(() => {
             const targetIndex = sectionToIndex[id];
-            props.setNavIndex(targetIndex);
+            if(props.setNavIndex){
+                props.setNavIndex(targetIndex);
+            }
         }, 200);
     }
     return (
