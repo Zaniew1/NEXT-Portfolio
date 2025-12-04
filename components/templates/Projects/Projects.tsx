@@ -8,40 +8,76 @@ import { ProjectNameInfo } from '@/components/molecules/ProjectNameInfo/ProjectN
 import { ImageContainer } from '@/components/atoms/ImageContainer/ImageContainer';
 import Link from 'next/link';
 import { AnimatePresence, motion } from 'motion/react';
+import { SwipeableDiv } from '@/components/molecules/SwipeableDiv/SwipeableDiv';
 export const Projects = () => {
     const [projectIndex, setProjectIndex] = useState<number>(0);
   const [isAnimating, setAnimating] = useState<number>(0);
+    const swipeLeft = () => {
+        setProjectIndex(projectIndex+1);
+    }
+    const swipeRight = () =>{
+        setProjectIndex(projectIndex-1);
+    }
 
+        const handlePrev = () => {
+        if(projectIndex === 0){
+            return projectData.length-1;
+        }else{
+            return projectIndex-1
+        }
+    };
+
+    const handleNext = () => {
+        if(projectIndex === projectData.length-1){
+            return 0;
+        }else{
+            return projectIndex+1
+        }
+    };
+    const changeProjectToPrevious = () =>{
+        setAnimating(handlePrev())
+        setTimeout(() => {
+            setProjectIndex(handlePrev());
+        }, 700);
+    }
+    const changeProjectToNext = () =>{
+        setAnimating(handleNext())
+        setTimeout(() => {
+            setProjectIndex(handleNext());
+        }, 700);
+    }
     return (
         <div className={styles.projects} id={"projects"}>
             <h1 className={styles.projects__header}>Projekty</h1 >
-            <div className={styles.projects__main}>
-                <div className={styles.projects__main__navigation}>
 
-                    <ProjectNavigationSmall index={projectIndex} isAnimating={isAnimating} setIndex={setProjectIndex} setAnimating={setAnimating}/>
-                    <ProjectNameInfo index={projectIndex} setIndex={setProjectIndex} isAnimating={isAnimating}/>
-                </div>
-                <AnimatePresence mode="wait">
-                   
-                    <div className={styles.projects__main__view}>
-                        <motion.div
-                            key={isAnimating}  
-                            initial={{ width: 0 }}
-                            animate={{ width: ["0%", "100%", "0%"] }} 
-                            transition={{
-                                duration: 1.4, 
-                                times: [0, 0.5, 1],
-                                ease: "easeInOut",
-                                delay: 0,   
-                            }}
-                            className={styles.projects__main__view__mask}>
-                        </motion.div>
-                        <Link className={styles.projects__main__view__link} href={"projects/"+projectIndex}>
-                            <ImageContainer  src={`/${projectData[projectIndex].images[0]}`} alt={'asd'} fill/>
-                        </Link>
+                <SwipeableDiv onSwipeLeft={changeProjectToNext} onSwipeRight={changeProjectToPrevious} >
+            <div className={styles.projects__main}>
+                    <div className={styles.projects__main__navigation}>
+                        <ProjectNavigationSmall index={projectIndex} isAnimating={isAnimating} setIndex={setProjectIndex} setAnimating={setAnimating}/>
+                        <ProjectNameInfo index={projectIndex} setIndex={setProjectIndex} isAnimating={isAnimating}/>
                     </div>
-                </AnimatePresence>
+                    <AnimatePresence mode="wait">
+                    
+                        <div className={styles.projects__main__view}>
+                            <motion.div
+                                key={isAnimating}  
+                                initial={{ width: 0 }}
+                                animate={{ width: ["0%", "100%", "0%"] }} 
+                                transition={{
+                                    duration: 1.4, 
+                                    times: [0, 0.5, 1],
+                                    ease: "easeInOut",
+                                    delay: 0,   
+                                }}
+                                className={styles.projects__main__view__mask}>
+                            </motion.div>
+                            <Link className={styles.projects__main__view__link} href={"projects/"+projectIndex}>
+                                <ImageContainer  src={`/${projectData[projectIndex].images[0]}`} alt={'asd'} fill/>
+                            </Link>
+                        </div>
+                    </AnimatePresence>
             </div>
+                </SwipeableDiv>
             <ProjectNav index={projectIndex} setIndex={setProjectIndex} isAnimating={isAnimating} setAnimating={setAnimating}/>
 
         </div>

@@ -1,0 +1,10 @@
+.swipable{
+    display: contents;
+}
+
+@media screen and (width >= 768px) {
+    .swipable{
+        pointer-events: none;
+    }
+
+}
