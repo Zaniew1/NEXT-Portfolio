@@ -22,7 +22,7 @@ export default function Home() {
   return (
 
       <div className="main">
-          <Nav></Nav>
+          <Nav navIndex={navIndex} setNavIndex={setNavIndex}></Nav>
           <CardScroll navIndex={navIndex} setNavIndex={setNavIndex} duration={700} >
             <Layout>
               <About></About>

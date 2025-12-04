@@ -9,34 +9,54 @@ export type SwipeableDivProps = React.PropsWithChildren<{
 
 export const SwipeableDiv: React.FC<SwipeableDivProps> = (props)=>{
     
-    const [touchStart, setTouchStart] = useState<null | number>(null)
-    const [touchEnd, setTouchEnd] = useState<null | number>(null)
+    const [touchStartHorizontal, setTouchStartHorizontal] = useState<null | number>(null)
+    const [touchStartVertical, setTouchStartVertical] = useState<null | number>(null)
+    const [touchEndHorizontal, setTouchEndHorizontal] = useState<null | number>(null)
+    const [touchEndVertical, setTouchEndVertical] = useState<null | number>(null)
 
     // the required distance between touchStart and touchEnd to be detected as a swipe
     const minSwipeDistance = 50 
 
     const onTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
-    setTouchEnd(null) // otherwise the swipe is fired even with usual touch events
-    setTouchStart(e.targetTouches[0].clientX)
+        setTouchEndHorizontal(null) 
+        setTouchEndVertical(null)
+        setTouchStartHorizontal(e.targetTouches[0].clientX)
+        setTouchStartVertical(e.targetTouches[0].clientY)
     }
 
-    const onTouchMove = (e : React.TouchEvent<HTMLDivElement>) => setTouchEnd(e.targetTouches[0].clientX)
+    const onTouchMove = (e : React.TouchEvent<HTMLDivElement>) => {
+        setTouchEndHorizontal(e.targetTouches[0].clientX)
+        setTouchEndVertical(e.targetTouches[0].clientY)
+    }
 
     const onTouchEnd = () => {
-    if (!touchStart || !touchEnd) return
-    const distance = touchStart - touchEnd
-    const isLeftSwipe = distance > minSwipeDistance
-    const isRightSwipe = distance < -minSwipeDistance
-    if (isLeftSwipe || isRightSwipe) console.log('swipe', isLeftSwipe ? 'left' : 'right')
+        if ((!touchStartHorizontal || !touchEndHorizontal) || (!touchStartVertical || !touchEndVertical )) return;
+
+        const distanceHorizontal = touchStartHorizontal - touchEndHorizontal;
+        const distanceVertical = touchStartVertical - touchEndVertical;
+
+        const isLeftSwipe = distanceHorizontal > minSwipeDistance;
+        const isRightSwipe = distanceHorizontal < -minSwipeDistance;
+        const isTopSwipe = distanceVertical > -minSwipeDistance;
+        const isBottomSwipe = distanceVertical < -minSwipeDistance;
+
+    
+        // if (isLeftSwipe || isRightSwipe) console.log('swipe', isLeftSwipe ? 'left' : 'right')
         if(isLeftSwipe && props.onSwipeLeft){
             props.onSwipeLeft();
         }
         if(isRightSwipe && props.onSwipeRight){
             props.onSwipeRight();
         }
-        
-    // add your conditional logic here
-    }
+        // if (isTopSwipe || isBottomSwipe) console.log('swipe', isTopSwipe ? 'top' : 'bot')
+        if(isTopSwipe && props.onSwipeTop){
+            props.onSwipeTop();
+        }
+        if(isBottomSwipe && props.onSwipeBottom){
+            props.onSwipeBottom();
+        }
+            
+        }
 
 
     return <div className={styles.swipable} onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd}>{props.children}</div>

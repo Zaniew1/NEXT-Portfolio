@@ -29,6 +29,11 @@
   box-sizing: border-box;
   font-family: "Lexend", Roboto, sans-serif ;
   font-weight: 300;
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+    display: none;
+    width: 0;
 }
 body {
   background: var(--background);
