@@ -4,33 +4,36 @@ import Slider from "react-slick";
 import styles from './ImageCarousel.module.css'
 import { NextArrow } from "@/components/atoms/NextArrow/NextArrow";
 import { PreviousArrow } from "@/components/atoms/PreviousArrow/PreviousArrow";
+import { useEffect } from "react";
 type CarouselType = {
     images: string[]
 }
-
 export const ImageCarousel = (props:CarouselType) =>{
+    useEffect(() => {
+      window.dispatchEvent(new Event('resize'));
+    }, []);
     const settings = {
-  dots: true,
-  infinite: true,
-  swipeToSlide: true,
-  slidesToShow: 3,              // default: desktop >1280
-  nextArrow: <NextArrow />,
-  prevArrow: <PreviousArrow />,
-  responsive: [
-    {
-      breakpoint: 1280,         // ≤ 1280px
-      settings: {
-        slidesToShow: 2,
-      },
-    },
-    {
-      breakpoint: 765,          // ≤ 765px
-      settings: {
-        slidesToShow: 1,
-      },
-    },
-  ],
-};
+        dots: true,
+        infinite: true,
+        swipeToSlide: true,
+        slidesToShow: 3,              // default: desktop >1280
+        nextArrow: <NextArrow />,
+        prevArrow: <PreviousArrow />,
+        responsive: [
+            {
+            breakpoint: 1280,         // ≤ 1280px
+            settings: {
+                slidesToShow: 2,
+            },
+            },
+            {
+            breakpoint: 765,          // ≤ 765px
+            settings: {
+                slidesToShow: 1,
+            },
+            },
+        ],
+    };
     return(
         <div className={styles.carousel}>
             {props.images.length > 1 &&
