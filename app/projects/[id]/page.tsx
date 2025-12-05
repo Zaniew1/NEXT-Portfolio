@@ -1,17 +1,19 @@
+'use client';
 import { LeftLine } from "@/components/molecules/LeftLine/LeftLine";
 import { RightLine } from "@/components/molecules/RightLine/RightLine";
 import { Nav } from "@/components/organisms/Nav/Nav";
 import styles from './singleProject.module.css'
 import { projectData } from "@/data/projectData";
 // import {ProjectDataType} from '../../../data/projectData'
+import { useParams } from 'next/navigation';
 import { ImageCarousel } from "@/components/molecules/ImageCarousel/ImageCarousel";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
 import { BsEye } from "react-icons/bs";
 import { ImageContainer } from "@/components/atoms/ImageContainer/ImageContainer";
 type Params = { [key: string]: string };
-async function ProjectPage({ params }: { params: Params }) {
-  const queryParams = await params;
+function ProjectPage() {
+  const queryParams = useParams();
   const projectId = queryParams.id
   const project = projectData.find(el => Number(el.id) === Number(projectId));
   if (!project) {

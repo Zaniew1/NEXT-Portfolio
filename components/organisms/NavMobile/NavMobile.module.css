@@ -8,6 +8,7 @@
     background-color: #131313;
     padding-bottom:  3em;
      transform: scaleY(0);
+      overflow-y: auto;
     transform-origin: top;
 }
 .navmobile__active{
@@ -41,6 +42,11 @@
 .navmobile__list__item:hover{
     color: var(--special-color);
 }
+.navmobile__links{
+    display: flex;
+    flex-direction: column;
+
+}
 .navmobile__social{
     display: flex;
     justify-content: center;
@@ -48,6 +54,7 @@
     opacity: 0;
     transition: .2s ease-in;
     color: var(--special-color);
+    margin-top: 3em;
 
 }
 .navmobile__social__icon{
@@ -64,12 +71,9 @@
     text-transform: uppercase;
     font-weight: 300;
     color:#b1b0b0 ;
-    margin: 2em 0;
+    margin: 1em 0;
     font-size: 2.4em;
     transition: .2s ease-in-out;
-}
-.navmobile__cv::after{
-    content: "Pobierz CV"
 }
 .navmobile__cv:hover{
     color: var(--special-color)

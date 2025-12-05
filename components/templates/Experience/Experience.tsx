@@ -7,7 +7,6 @@ export const Experience = () => {
         <div className={styles.experience} id={"experience"}>
             <h1 className={styles.experience__header}>Doświadczenie</h1 >
             <ExperienceCard data={experienceData[0]} />
-            <div className={styles.experience__nav}></div>
         </div>
     )
 }
