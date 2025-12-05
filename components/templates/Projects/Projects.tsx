@@ -10,26 +10,19 @@ import Link from 'next/link';
 import { AnimatePresence, motion } from 'motion/react';
 import { SwipeableDiv } from '@/components/molecules/SwipeableDiv/SwipeableDiv';
 export const Projects = () => {
-    const [projectIndex, setProjectIndex] = useState<number>(0);
+    const [projectIndex, setProjectIndex] = useState<number>(1);
   const [isAnimating, setAnimating] = useState<number>(0);
-    const swipeLeft = () => {
-        setProjectIndex(projectIndex+1);
-    }
-    const swipeRight = () =>{
-        setProjectIndex(projectIndex-1);
-    }
-
-        const handlePrev = () => {
-        if(projectIndex === 0){
+   
+    const handlePrev = () => {
+        if(projectIndex === 1){
             return projectData.length-1;
         }else{
             return projectIndex-1
         }
     };
-
     const handleNext = () => {
         if(projectIndex === projectData.length-1){
-            return 0;
+            return 1;
         }else{
             return projectIndex+1
         }
@@ -46,6 +39,7 @@ export const Projects = () => {
             setProjectIndex(handleNext());
         }, 700);
     }
+    console.log(projectIndex)
     return (
         <div className={styles.projects} id={"projects"}>
             <h1 className={styles.projects__header}>Projekty</h1 >
@@ -72,7 +66,7 @@ export const Projects = () => {
                                 className={styles.projects__main__view__mask}>
                             </motion.div>
                             <Link className={styles.projects__main__view__link} href={"projects/"+projectIndex}>
-                                <ImageContainer  src={`/${projectData[projectIndex].images[0]}`} alt={'asd'} fill/>
+                                <ImageContainer  src={`/${projectData[projectIndex-1].images[0]}`} alt={'asd'} fill/>
                             </Link>
                         </div>
                     </AnimatePresence>

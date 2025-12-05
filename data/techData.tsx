@@ -8,14 +8,16 @@ import { VscVscode } from "react-icons/vsc";
 import { BsFiletypeDoc } from "react-icons/bs";
 import { LuTestTubeDiagonal } from "react-icons/lu";
 import { TbBrandFramerMotion } from "react-icons/tb";
-type TechDataType = {
-    id: number,
-    section: string,
-    technologies: {
+
+export type TechDataTechnologiesType = {
         icon: React.ReactNode | undefined,
         name: string,
         color?: {color: string} | {background: string}
-    }[]
+}
+type TechDataType = {
+    id: number,
+    section: string,
+    technologies: TechDataTechnologiesType[]
 }[]
 
 export const techData: TechDataType = [

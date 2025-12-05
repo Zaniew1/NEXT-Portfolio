@@ -16,11 +16,11 @@ export const ProjectNavigationSmall = (props: ProjectNavigationSmallType) =>{
     } 
     return (
         <div className={styles.smallnav__wrapper}>
-             {projectData.map((el ,idx)=>{
+             {projectData.map((el)=>{
                 return (<div onClick={()=> handleProjectChange(el.id)}
                              className={`${styles.smallnav__wrapper__element} ${props.index === el.id ? styles.smallnav__wrapper__element__active: ""}`} 
                              key={`${el.id}-${el.title}`}>
-                                0{idx+1}
+                                0{el.id}
                                 <span className={styles.smallnav__wrapper__element__span}>
                                 </span>
                         </div>)

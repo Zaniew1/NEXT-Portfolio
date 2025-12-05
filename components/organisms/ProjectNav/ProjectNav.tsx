@@ -22,8 +22,9 @@ type ProjectNavType = {
 }
 
 export const ProjectNav = (props: ProjectNavType) =>{
+
     const handlePrev = () => {
-        if(props.index === 0){
+        if(props.index === 1){
             return projectData.length-1;
         }else{
             return props.index-1
@@ -32,7 +33,7 @@ export const ProjectNav = (props: ProjectNavType) =>{
 
     const handleNext = () => {
         if(props.index === projectData.length-1){
-            return 0;
+            return 1;
         }else{
             return props.index+1
         }
@@ -49,6 +50,13 @@ export const ProjectNav = (props: ProjectNavType) =>{
             props.setIndex(handleNext());
         }, 700);
     }
+    const project = projectData.find(el=> el.id === props.index)
+    const previousProject = projectData.find(el=> el.id === handlePrev())
+    const nextProject = projectData.find(el=> el.id === handleNext())
+    if(!project) return null;
+    if(!previousProject) return null;
+    if(!nextProject) return null;
+
     return(
         <div className={styles.projectNav}>
 
@@ -64,7 +72,7 @@ export const ProjectNav = (props: ProjectNavType) =>{
                             delay: 0,      
                         }}
                         className={styles.projectNav__wrapper__image__mask__left}></motion.div>
-                    <Image style={{borderRadius: "10px 0 10px 0"}} src={`/${projectData[handlePrev()].images[0]}`} alt={'asd'} fill/>
+                    <Image style={{borderRadius: "10px 0 10px 0"}} src={`/${previousProject.images[0]}`} alt={'asd'} fill/>
                 </div>
                 <span className={styles.projectNav__wrapper__navigation}>Poprzedni projekt</span>
                 <motion.span 
@@ -76,7 +84,7 @@ export const ProjectNav = (props: ProjectNavType) =>{
                         ease: "easeInOut",
                         delay: 0,
                     }}
-                    className={styles.projectNav__wrapper__name}>{projectData[handlePrev()].title}</motion.span>
+                    className={styles.projectNav__wrapper__name}>{previousProject.title}</motion.span>
             </div>
             <div onClick={() => changeProjectToPrevious() } className={styles.projectNav__arrow__left}><ChevronLeft/></div>
             <Link href={'/projects'}>
@@ -98,7 +106,7 @@ export const ProjectNav = (props: ProjectNavType) =>{
                             delay: 0,      
                         }}
                         className={styles.projectNav__wrapper__image__mask__right}></motion.div>
-                    <Image style={{borderRadius: "10px 0 10px 0"}} src={`/${projectData[handleNext()].images[0]}`} alt={'asd'} fill/>
+                    <Image style={{borderRadius: "10px 0 10px 0"}} src={`/${nextProject.images[0]}`} alt={'asd'} fill/>
                 </div>
                 <span className={styles.projectNav__wrapper__navigation}>Następny projekt</span>
                 <motion.span 
@@ -110,7 +118,7 @@ export const ProjectNav = (props: ProjectNavType) =>{
                         ease: "easeInOut",
                         delay: 0,
                     }}
-                    className={styles.projectNav__wrapper__name}>{projectData[handleNext()].title}</motion.span>
+                    className={styles.projectNav__wrapper__name}>{nextProject.title}</motion.span>
             </div>
         </div>
     ); 
