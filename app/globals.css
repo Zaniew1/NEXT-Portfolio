@@ -41,9 +41,7 @@ body {
 
 }
 .main{
-  overscroll-behavior: none;
-  overflow: hidden;
-  touch-action: none;
+  
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -52,4 +50,13 @@ body {
   height: 100%;
   width: 100%;
   position: relative;
+}
+@media screen and (width >= 768px) {
+   
+    .main{
+      overscroll-behavior: none;
+      overflow: hidden;
+      touch-action: none;
+    }
+ 
 }

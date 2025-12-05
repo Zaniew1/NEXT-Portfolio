@@ -10,30 +10,30 @@ type CarouselType = {
 
 export const ImageCarousel = (props:CarouselType) =>{
     const settings = {
-         dots: true,
-        infinite: true,
-        slidesToShow: 3,
-        swipeToSlide: true,
-        nextArrow: <NextArrow />,
-        prevArrow: <PreviousArrow />,
-        responsive: [
-            {
-                breakpoint: 1280,     // <= 1280px
-                settings: {
-                    slidesToShow: 2,
-                },
-            },
-            {
-                breakpoint: 786,     // <= 786px
-                settings: {
-                    slidesToShow: 1,
-                },
-            }
-          
-        ],
-    };
+  dots: true,
+  infinite: true,
+  swipeToSlide: true,
+  slidesToShow: 3,              // default: desktop >1280
+  nextArrow: <NextArrow />,
+  prevArrow: <PreviousArrow />,
+  responsive: [
+    {
+      breakpoint: 1280,         // ≤ 1280px
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+    {
+      breakpoint: 765,          // ≤ 765px
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+  ],
+};
     return(
         <div className={styles.carousel}>
+            {props.images.length > 1 &&
             <Slider {...settings}>
                 {props.images.map((image, index)=>{
                     return(
@@ -43,6 +43,12 @@ export const ImageCarousel = (props:CarouselType) =>{
                     )
                 })}
             </Slider>
+            }
+            {props.images.length == 1 && 
+                <div className={styles.carousel__item__single}>
+                    <ImageContainer  src={`/${props.images[0]}`} fill={true} alt={`Zdjęcie poglądowe projektu`}/>
+                </div>
+            }
         </div>
     )
 

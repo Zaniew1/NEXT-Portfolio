@@ -48,7 +48,7 @@
 .project__content{
     display: flex;
     flex-direction: column;
-    margin: 2em 2em;
+    margin: 2em 2em 10em 2em;
 }
 .project__content__wrapper{
     width: 100%;

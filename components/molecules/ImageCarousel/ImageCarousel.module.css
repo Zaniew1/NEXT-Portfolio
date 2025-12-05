@@ -10,3 +10,16 @@
     cursor: pointer;
 
 }
+.carousel__item__single{
+    margin: 1em auto;
+    padding: 1em;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    max-width: 900px;
+}
+@media screen and (width >= 1480px) {
+    .carousel{
+        height: 500px;
+    }
+}
