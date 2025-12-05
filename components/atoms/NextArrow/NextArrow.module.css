@@ -1,0 +1,25 @@
+.arrow{
+    display: flex;
+    width: 1.5em;
+    height: 1.5em;
+    cursor: pointer;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(120%, -50%);
+}
+.arrow:hover{
+    color: var(--special-color);
+}
+@media screen and (width >= 768px) {
+    .arrow{
+      transform: translate(150%, -50%);
+    }
+}
+@media screen and (width >= 1220px) {
+    .arrow{
+        transform: translate(180%, -50%);
+    }
+ 
+}
