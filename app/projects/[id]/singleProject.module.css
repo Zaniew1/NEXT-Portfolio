@@ -1,0 +1,113 @@
+.project{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    margin-top: var(--topnav-height);
+    width: 100%;
+    transition: transform .5s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow-y: scroll;
+}
+.project__header{
+    font-size: 2.4em;
+}
+.project__type{
+    margin-top: 0.5em;
+    color: var(--special-color);
+}
+.project__desc{
+    font-size: 1.2em;
+    margin: 2em 0;
+}
+.project__links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.project__links > a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    border-radius: 5px;
+    margin: 2em 1em 0.5em 1em;
+    transition: .3s ease-in-out;
+
+}
+.project__links > a:hover{
+    color: var(--special-color);
+}
+.project__links > a > svg{
+    font-size: 2em;
+
+}
+.project__content{
+    display: flex;
+    flex-direction: column;
+    margin: 2em 2em;
+}
+.project__content__wrapper{
+    width: 100%;
+}
+.project__content__wrapper__header{
+    font-size: 1.5em;
+    margin: 2em 0 0.5em 0 ;
+    color: var(--special-color);
+}
+.project__content__wrapper__text{
+    margin-left: 1em ;
+}
+.project__content__wrapper__list{
+    list-style-type: disc;
+    margin-left: 2em ;
+}
+.project__content__wrapper__text{
+    margin-left: 1em ;
+}
+.project__tech{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3em 0 0 0 ;
+    width: 80%;
+    flex-wrap: wrap;
+}
+.project__tech__item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1em 0.5em;
+    max-width: 30%;
+    flex-grow: 1;
+}
+.project__tech__item__icon{
+    font-size: 1.6em;
+    margin-bottom: 0.5em;
+}
+
+@media screen and (width >= 768px) {
+    .project__content{
+       
+        width: 80%;
+    }
+    .project__tech{
+        width: 60%;
+    }
+ 
+}
+@media screen and (width >= 1280px) {
+   
+    .project__content{
+       
+        width: 50%;
+    }
+    .project__tech{
+        width: 40%;
+    }
+ 
+}

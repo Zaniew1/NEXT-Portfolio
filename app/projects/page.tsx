@@ -5,7 +5,7 @@ import styles from "./allProjects.module.css";
 import { Layout } from "@/components/molecules/Layout/Layout";
  function ProjectsPage () {
   return (
-    <div >
+    <main >
         <Nav></Nav>
          <Layout>
             <div className={styles.projects}>
@@ -15,8 +15,9 @@ import { Layout } from "@/components/molecules/Layout/Layout";
          </Layout>
         <LeftLine></LeftLine>
         <RightLine></RightLine> 
+        
 
-    </div>
+    </main>
   );
 }
 export default ProjectsPage
