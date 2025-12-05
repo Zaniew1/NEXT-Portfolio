@@ -1,5 +1,7 @@
 "use client";
 import { ImageContainer } from "@/components/atoms/ImageContainer/ImageContainer";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import styles from './ImageCarousel.module.css'
 import { NextArrow } from "@/components/atoms/NextArrow/NextArrow";
