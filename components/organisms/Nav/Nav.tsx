@@ -23,7 +23,7 @@ export const Nav = (props: NavIndexTypeOptional) =>{
 
                 {pathname != "/projects" && <Link href="/projects" className={styles.nav__link}>Wszystkie Projekty</Link>}
                 {pathname == "/projects" && <Link href="/" className={styles.nav__cv}>Strona główna</Link>}
-                <Link  download href="/Mateusz Zaniewski FullStack CV POL.pdf" className={styles.nav__cv}>Pobierz CV</Link>
+                <Link  download href="/Mateusz_Zaniewski_FullStack_CV_POL.pdf" className={styles.nav__cv}>Pobierz CV</Link>
             </div>
             <Burger active={burgerActive} setActive={setBurgerActive}/>
             <NavMobile navIndex={props.navIndex} setNavIndex={props.setNavIndex} active={burgerActive} setActive={setBurgerActive} />
