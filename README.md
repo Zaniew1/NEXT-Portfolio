@@ -5,13 +5,36 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 First, run the development server:
 
 ```bash
+create folder 
+
+in terminal do:
+
+git clone https://github.com/Zaniew1/NEXT-Portfolio.git
+
+cd NEXT-Portfolio
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+go to localhost:3000
+
+OR 
+
+```bash
+create folder 
+
+in terminal do:
+
+git clone https://github.com/Zaniew1/NEXT-Portfolio.git
+
+cd NEXT-Portfolio
+
+docker build -t portfolio .
+
+docker run --rm -d -p 3000:3000 portfolio
+
+go to localhost:3000
+
+
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
