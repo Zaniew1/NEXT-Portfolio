@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { MobileNavPropsType, NavIndexTypeOptional } from '../Nav/Nav'
 import styles from './NavMobile.module.css'
 import { Linkedin, Github } from 'lucide-react';
+import { usePathname } from 'next/navigation';
 export const NavMobile = (props: MobileNavPropsType & NavIndexTypeOptional)=>{
     const sectionToIndex: Record<string, number> = {
         about: 0,
@@ -19,6 +20,7 @@ export const NavMobile = (props: MobileNavPropsType & NavIndexTypeOptional)=>{
             }
         }, 200);
     }
+    const pathname = usePathname();
     return (
         <div className={`${styles.navmobile} ${props.active ? styles.navmobile__active : ""}`}>
             <ul className={styles.navmobile__list}>
@@ -29,8 +31,9 @@ export const NavMobile = (props: MobileNavPropsType & NavIndexTypeOptional)=>{
                 <li onClick={()=>navigateAndClose("contact")} className={styles.navmobile__list__item}>Kontakt</li>
             </ul>
             <div className={styles.navmobile__links}>
-                <Link   href="/projects" className={styles.navmobile__cv}>Wszystkie projekty</Link>
-                <Link  download href="/Mateusz Zaniewski FullStack CV POL.pdf" className={styles.navmobile__cv}>Pobierz CV</Link>
+                {pathname != "/projects" && <Link   href="/projects" className={styles.navmobile__cv}>Wszystkie projekty</Link>}
+                {pathname != "/" && <Link   href="/" className={styles.navmobile__cv}>Strona główna</Link>}
+                <Link  download href="/Mateusz_Zaniewski_FullStack_CV_POL.pdf" className={styles.navmobile__cv}>Pobierz CV</Link>
             </div>
             <div className={styles.navmobile__social}>
                 <Link href={"https://www.linkedin.com/in/mateusz-zaniewski-3a159b107"} className={styles.navmobile__social__icon}><Linkedin/></Link>

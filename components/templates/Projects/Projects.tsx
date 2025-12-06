@@ -39,7 +39,6 @@ export const Projects = () => {
             setProjectIndex(handleNext());
         }, 700);
     }
-    console.log(projectIndex)
     return (
         <div className={styles.projects} id={"projects"}>
             <h1 className={styles.projects__header}>Projekty</h1 >

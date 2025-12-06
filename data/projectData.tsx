@@ -139,7 +139,7 @@ export const projectData : ProjectDataType[] = [
     {
         id: 4,
         title: "System autoryzacyjny",
-        type:"Backend",
+        type:"Back-end",
          technologies: [
             {
                 icon: <SiTypescript/>,

@@ -11,10 +11,10 @@ export const About = () => {
 
     const [switchText, setSwitchText]  = useState<number>(0);
     const swipeLeft = () => {
-        setSwitchText(1);
+        setSwitchText(0);
     }
     const swipeRight = () =>{
-        setSwitchText(0)
+        setSwitchText(1)
     }
 
 

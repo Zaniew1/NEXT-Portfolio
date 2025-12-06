@@ -1,13 +1,21 @@
 import { useState } from "react"
 import styles from './SwipeableDiv.module.css'
+import { HTMLMotionProps, motion } from "motion/react";
 export type SwipeableDivProps = React.PropsWithChildren<{
     onSwipeLeft?: ()=> void;
     onSwipeRight?: ()=> void;
     onSwipeTop?: ()=> void;
     onSwipeBottom?: ()=> void;
-}>;
+}> &  HTMLMotionProps<"div">;
 
-export const SwipeableDiv: React.FC<SwipeableDivProps> = (props)=>{
+export const SwipeableDiv: React.FC<SwipeableDivProps> = ({
+  children,
+  onSwipeLeft,
+  onSwipeRight,
+  onSwipeTop,
+  onSwipeBottom,
+  ...rest // <-- includes motion animation props
+})=>{
     
     const [touchStartHorizontal, setTouchStartHorizontal] = useState<null | number>(null)
     const [touchStartVertical, setTouchStartVertical] = useState<null | number>(null)
@@ -37,27 +45,18 @@ export const SwipeableDiv: React.FC<SwipeableDivProps> = (props)=>{
 
         const isLeftSwipe = distanceHorizontal > minSwipeDistance;
         const isRightSwipe = distanceHorizontal < -minSwipeDistance;
-        const isTopSwipe = distanceVertical > -minSwipeDistance;
+
+        const isTopSwipe = distanceVertical > minSwipeDistance;
         const isBottomSwipe = distanceVertical < -minSwipeDistance;
 
-    
-        // if (isLeftSwipe || isRightSwipe) console.log('swipe', isLeftSwipe ? 'left' : 'right')
-        if(isLeftSwipe && props.onSwipeLeft){
-            props.onSwipeLeft();
-        }
-        if(isRightSwipe && props.onSwipeRight){
-            props.onSwipeRight();
-        }
-        // if (isTopSwipe || isBottomSwipe) console.log('swipe', isTopSwipe ? 'top' : 'bot')
-        if(isTopSwipe && props.onSwipeTop){
-            props.onSwipeTop();
-        }
-        if(isBottomSwipe && props.onSwipeBottom){
-            props.onSwipeBottom();
-        }
+        if (isLeftSwipe && onSwipeLeft) onSwipeLeft();
+        if (isRightSwipe && onSwipeRight) onSwipeRight();
+
+        if (isTopSwipe && onSwipeTop) onSwipeTop();
+        if (isBottomSwipe && onSwipeBottom) onSwipeBottom();
             
-        }
+    }
 
 
-    return <div className={styles.swipable} onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd}>{props.children}</div>
+    return <motion.div   {...rest}  className={styles.swipable} onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd} >{children}</motion.div>
 }
