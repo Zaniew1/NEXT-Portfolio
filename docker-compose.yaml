@@ -4,11 +4,8 @@ services:
     ports:
       - "3000:3000"
     command: npm run dev
-
-    # --- File watching system (Compose Watch) ---
     develop:
       watch:
-        # 1. Sync all source code into the container
         - action: sync
           path: .
           target: /app
@@ -17,11 +14,9 @@ services:
             - .next/
             - .git/
 
-        # 2. Rebuild container when package.json changes
         - action: rebuild
           path: package.json
 
-    # You no longer need bind-mounts when using watch sync
     volumes:
       - /app/node_modules
 

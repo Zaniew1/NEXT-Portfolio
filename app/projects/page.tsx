@@ -25,12 +25,7 @@ import Link from "next/link";
       const frontEndProjects = projectData.filter(el => el.type === "Front-end")
       const backEndProjects = projectData.filter(el => el.type === "Back-end")
       const fullStackProjects = projectData.filter(el => el.type === "Full-stack")
-      const ball = {
-    width: 100,
-    height: 100,
-    backgroundColor: "#dd00ee",
-    borderRadius: "50%",
-}
+
   return (
     <main >
         <Nav></Nav>
@@ -105,15 +100,17 @@ import Link from "next/link";
                                     transition={{ delay: (index+1)/15, duration: 0.4, ease: "easeInOut" }}
                                     className={styles.projects__swipeable__wrapper__div}
                                   >
-                                    <Link className={styles.projects__swipeable__wrapper__link} key={el.id} href={"/projects/"+el.id}>
+                                  <Link className={styles.projects__swipeable__wrapper__link} key={el.id} href={"/projects/"+el.id}>
+                                      <span className={styles.projects__swipeable__wrapper__link__hover__one}></span>
+                                      <span className={styles.projects__swipeable__wrapper__link__hover__two}></span>
+                                      <span className={styles.projects__swipeable__wrapper__link__hover__three}></span>
+                                      <span className={styles.projects__swipeable__wrapper__link__hover__four}></span>
+                                      <span className={styles.projects__swipeable__wrapper__link__hover__bgc}></span>
                                       <span className={styles.projects__swipeable__wrapper__link__hover}>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
+                                        {el.title}
                                       </span>
                                       <ImageContainer fill src={"/"+el.images[0]} alt={el.title}/>
-                                    </Link>
+                                      </Link>
                                   </motion.div>
                                 )
                               })}

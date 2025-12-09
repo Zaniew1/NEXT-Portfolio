@@ -15,21 +15,13 @@
 .nav__links{
     display: flex;
 }
-.nav__link{
-    display: none;
-    text-transform: uppercase;
-    font-weight: 300;
-    color:#b1b0b0 ;
-    margin-right: 20px;
-    transition: .2s ease-in-out;
-}
 .nav__text{
     text-transform: uppercase;
     font-weight: 300;
     margin-left: 20px;
     color:#b1b0b0 ;
 }
-.nav__cv{
+.nav__cv, .nav__link{
     display: none;
     text-transform: uppercase;
     font-weight: 300;
@@ -37,7 +29,7 @@
     margin-right: 20px;
     transition: .2s ease-in-out;
 }
-.nav__cv:hover, .nav__link__link{
+.nav__cv:hover, .nav__link:hover{
     color: var(--special-color)
 }
 
