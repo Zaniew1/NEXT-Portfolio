@@ -52,7 +52,7 @@ export const projectData : ProjectDataType[] = [
             },
         ],
         description:"To jest przykładowy opis",
-        images:["sample1.jpg", "sample2.jpg", "sample3.jpg", "sample4.jpg"],
+        images:["Bhp/1.png", "Bhp/2.png", "Bhp/3.png"],
         github: "https://github.com/Zaniew1/BHP",
         view: "asd",
         content:[
@@ -101,7 +101,7 @@ export const projectData : ProjectDataType[] = [
             },
         ],
         description:"To jest portoflio opis",
-        images:["sample1.jpg"],
+        images:["Portfolio/1.png", "Portfolio/2.png"],
         github: "https://github.com/Zaniew1/NEXT-Portfolio",
         view: "https://www.mzaniewski.pl"
     },
@@ -132,7 +132,7 @@ export const projectData : ProjectDataType[] = [
             },
         ],
         description:"To jest przykładowy opis",
-        images:["sample2.jpg"],
+        images:["Photography/1.png","Photography/2.png","Photography/3.png","Photography/4.png","Photography/5.png","Photography/6.png"],
         github: "https://github.com/Zaniew1/NEXT-PhotographySite",
         view: ""
     },
@@ -163,7 +163,7 @@ export const projectData : ProjectDataType[] = [
             },
         ],
         description:"To jest przykładowy opis",
-        images:["sample3.jpg"],
+        images:["Auth/1.png","Auth/2.png","Auth/3.png" ],
         github: "https://github.com/Zaniew1/NODE-Auth"
     },
     {
@@ -193,7 +193,7 @@ export const projectData : ProjectDataType[] = [
             },
         ],
         description:"To jest przykładowy opis",
-        images:["sample4.jpg"],
+        images:["Blog/1.png", "Blog/2.png"],
         github: "https://github.com/Zaniew1/MERN-Blog"
     },
     {
@@ -223,7 +223,7 @@ export const projectData : ProjectDataType[] = [
             },
         ],
         description:"To jest przykładowy opis",
-        images:["sample5.jpg"],
+        images:["Pomodoro/1.png","Pomodoro/2.png", "Pomodoro/3.png", "Pomodoro/4.png", "Pomodoro/5.png"],
         github: "https://github.com/Zaniew1/PomodoroApp"
     },
    
