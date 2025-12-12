@@ -20,7 +20,7 @@
 .navmobile__active .navmobile__social{
     opacity: 1;
 }
-.navmobile__active .navmobile__cv{
+.navmobile__active .navmobile__link{
     opacity: 1;
 }
 .navmobile__list{
@@ -30,7 +30,7 @@
     flex-direction: column;
     opacity: 0;
     width: 100%;
-    margin: 2em 0 1em 0;
+    margin: 2em 0 0.5em 0;
     font-size: 1.6em;
     transition: .2s ease-in;
 }
@@ -65,17 +65,17 @@
     height: 3em;
 }
 
-.navmobile__cv{
+.navmobile__link{
     display: flex;
     justify-content: center;
     text-transform: uppercase;
     font-weight: 300;
     color:#b1b0b0 ;
-    margin: 1em 0;
-    font-size: 2.4em;
+    margin: 0.5em 0;
+    font-size: 1.4em;
     transition: .2s ease-in-out;
 }
-.navmobile__cv:hover{
+.navmobile__link:hover{
     color: var(--special-color)
 }
 @media screen and (width >= 768px) {

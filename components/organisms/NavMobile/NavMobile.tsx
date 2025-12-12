@@ -31,9 +31,9 @@ export const NavMobile = (props: MobileNavPropsType & NavIndexTypeOptional)=>{
                 <li onClick={()=>navigateAndClose("contact")} className={styles.navmobile__list__item}>Kontakt</li>
             </ul>
             <div className={styles.navmobile__links}>
-                {pathname != "/projects" && <Link   href="/projects" className={styles.navmobile__cv}>Wszystkie projekty</Link>}
-                {pathname != "/" && <Link   href="/" className={styles.navmobile__cv}>Strona główna</Link>}
-                <Link  download href="/Mateusz_Zaniewski_FullStack_CV_POL.pdf" className={styles.navmobile__cv}>Pobierz CV</Link>
+                {pathname != "/projects" && <Link   href="/projects" className={styles.navmobile__link}>Wszystkie projekty</Link>}
+                {pathname != "/" && <Link   href="/" className={styles.navmobile__link}>Strona główna</Link>}
+                <Link  download href="/Mateusz_Zaniewski_FullStack_CV_POL.pdf" className={styles.navmobile__link}>Pobierz CV</Link>
             </div>
             <div className={styles.navmobile__social}>
                 <Link href={"https://www.linkedin.com/in/mateusz-zaniewski-3a159b107"} className={styles.navmobile__social__icon}><Linkedin/></Link>
