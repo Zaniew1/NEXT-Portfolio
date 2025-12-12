@@ -2,8 +2,7 @@
 import { ImageContainer } from "@/components/atoms/ImageContainer/ImageContainer";
 import Slider from "react-slick";
 import styles from './ImageCarousel.module.css'
-import { Arrow, NextArrow } from "@/components/atoms/Arrow/Arrow";
-import { PreviousArrow } from "@/components/atoms/PreviousArrow/PreviousArrow";
+import { Arrow, } from "@/components/atoms/Arrow/Arrow";
 import { useEffect, useState } from "react";
 type CarouselType = {
     images: string[]
