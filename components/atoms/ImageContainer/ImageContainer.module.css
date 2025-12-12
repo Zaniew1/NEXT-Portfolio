@@ -5,10 +5,10 @@
     overflow: hidden;
 }
 .imageContainer > img {
-  position: absolute; /* makes image stay still */
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100%;        /* or natural width */
+  width: 100%;
   height: 100%;
   object-fit: cover;
   pointer-events: none;

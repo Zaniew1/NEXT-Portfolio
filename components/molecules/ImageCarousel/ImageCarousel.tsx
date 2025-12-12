@@ -2,7 +2,7 @@
 import { ImageContainer } from "@/components/atoms/ImageContainer/ImageContainer";
 import Slider from "react-slick";
 import styles from './ImageCarousel.module.css'
-import { NextArrow } from "@/components/atoms/NextArrow/NextArrow";
+import { Arrow, NextArrow } from "@/components/atoms/Arrow/Arrow";
 import { PreviousArrow } from "@/components/atoms/PreviousArrow/PreviousArrow";
 import { useEffect, useState } from "react";
 type CarouselType = {
@@ -30,8 +30,8 @@ export const ImageCarousel = (props:CarouselType) =>{
         slidesToShow: initialSlidesToShow,  
         slidesToScroll: 1,   
         initialSlide: 0,         // default: desktop >1280
-        nextArrow: <NextArrow />,
-        prevArrow: <PreviousArrow />,
+        nextArrow: <Arrow  />,
+        prevArrow: <Arrow />,
         mobileFirst: true,
         responsive: [
             {

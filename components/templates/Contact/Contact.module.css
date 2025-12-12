@@ -9,13 +9,7 @@
     position: sticky;
     top: 0;
 }
-.contact__header{
-   font-size: 1.5em;
-    margin: 3em 0 1em 0;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    font-weight: 300;
-}
+
 .contact__form{
     width: 90%;
     font-size: 0.7em;
@@ -146,15 +140,9 @@ input:-webkit-autofill::first-line {
     background: #2d2d2d;
     pointer-events: none;
 }
-@media screen and (width >= 500px) {
-    .contact__header{
-        margin: 1em 0 1em 0;
-    }
-}
+
 @media screen and (width >= 768px) {
-    .contact__header{
-      font-size: 2.5em;
-    }
+  
     .contact__form{
         width: 40%;
         font-size: 1em;

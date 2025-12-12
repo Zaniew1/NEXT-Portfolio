@@ -7,16 +7,13 @@ import { AnimatePresence, motion } from "motion/react"
 import { SwipeableDiv } from '@/components/molecules/SwipeableDiv/SwipeableDiv';
 
 export const About = () => {
-
-
     const [switchText, setSwitchText]  = useState<number>(0);
     const swipeLeft = () => {
-        setSwitchText(0);
+        setSwitchText(1);
     }
     const swipeRight = () =>{
-        setSwitchText(1)
+        setSwitchText(0)
     }
-
 
     return <div className={styles.about} id={"about"}>
         <div className={styles.about__text}>
@@ -27,7 +24,6 @@ export const About = () => {
             </div>
             <div className={styles.about__text__wrapper}>
                 <SwipeableDiv onSwipeLeft={swipeLeft} onSwipeRight={swipeRight} >
-
                     <p  className={`${styles.about__text__paragraph} ${switchText == 0 ? styles.about__text__paragraph__fromtop: styles.about__text__paragraph__hidetop}`}> 
                         Cześć! Jestem fullstack developerem z 3-letnim stażem, a ostatnio intensywnie pracowałem nad produktem SaaS z branży reklamy (dystrybucja i wyświetlanie).
                         Można powiedzieć, że świetnie ogarniam, jak tworzyć skalowalne i naprawdę wydajne aplikacje webowe.

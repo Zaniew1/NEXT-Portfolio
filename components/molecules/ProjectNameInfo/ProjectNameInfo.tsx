@@ -17,7 +17,7 @@ export const ProjectNameInfo = (props: {index : number, setIndex: (index: number
                     }}className={styles.projectname__wrapper}>
                 <div className={styles.projectname__wrapper__type}>{project.type}</div>
                 <div className={styles.projectname__wrapper__info}>
-                    <div className={styles.projectname__wrapper__info__index}>0{project.id}</div>
+                    <div className={styles.projectname__wrapper__info__index}>0{project.id+1}</div>
                     <div className={styles.projectname__wrapper__info__name}>{project.title}</div>
                 </div>
                 <div className={styles.projectname__wrapper__link}>

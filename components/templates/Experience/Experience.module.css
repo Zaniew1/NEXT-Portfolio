@@ -8,13 +8,6 @@
     min-width: 320px;
     --index: 4;
 }
-.experience__header{
-   font-size: 1.5em;
-    margin: 2em 0 1em 0;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    font-weight: 300;
-}
 .experience__main{
     display: flex;
     position: relative;

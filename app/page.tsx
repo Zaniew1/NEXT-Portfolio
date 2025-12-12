@@ -6,7 +6,7 @@ import { Nav } from "@/components/organisms/Nav/Nav";
 import { NavSmall } from "@/components/organisms/NavSmall/NavSmall";
 import {About} from "@/components/templates/About/About";
 import {Contact} from "@/components/templates/Contact/Contact";
-import { Layout } from "@/components/molecules/Layout/Layout";
+import { Layout } from "@/components/atoms/Layout/Layout";
 import { Tech } from "@/components/templates/Tech/Tech";
 import { Projects } from "@/components/templates/Projects/Projects";
 import { Experience } from "@/components/templates/Experience/Experience";
@@ -21,30 +21,29 @@ export default function Home() {
   const [navIndex, setNavIndex] = useState<number>(0);
   return (
 
-      <div className="main">
+      <main className="main">
           <Nav navIndex={navIndex} setNavIndex={setNavIndex}></Nav>
           <CardScroll navIndex={navIndex} setNavIndex={setNavIndex} duration={700} >
             <Layout>
-              <About></About>
+              <About/>
             </Layout>
             <Layout>
-              <Projects></Projects>
+              <Projects/>
             </Layout>
             <Layout>
-              <Tech></Tech>
+              <Tech/>
             </Layout>
             <Layout>
-              <Experience></Experience>
+              <Experience/>
             </Layout>
             <Layout>
-              <Contact></Contact>
+              <Contact/>
             </Layout>
           </CardScroll>
           <NavSmall navIndex={navIndex} setNavIndex={setNavIndex}></NavSmall>
           <NavSide navIndex={navIndex} setNavIndex={setNavIndex}></NavSide>
           <LeftLine></LeftLine>
           <RightLine></RightLine> 
-
-      </div>
+      </main>
   );
 }

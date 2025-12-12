@@ -26,7 +26,7 @@ export type ProjectDataType = {
 
 export const projectData : ProjectDataType[] = [
     {
-        id: 1,
+        id: 0,
         title: "BHP (Saas)",
         type:"Full-stack",
         technologies: [
@@ -75,7 +75,7 @@ export const projectData : ProjectDataType[] = [
         ]
     },
      {
-        id: 2,
+        id: 1,
         title: "Portfolio",
         type:"Front-end",
          technologies: [
@@ -106,7 +106,7 @@ export const projectData : ProjectDataType[] = [
         view: "https://www.mzaniewski.pl"
     },
     {
-        id: 3,
+        id: 2,
         title: "Portfolio fotografa",
         type:"Full-stack",
          technologies: [
@@ -137,7 +137,7 @@ export const projectData : ProjectDataType[] = [
         view: ""
     },
     {
-        id: 4,
+        id: 3,
         title: "System autoryzacyjny",
         type:"Back-end",
          technologies: [
@@ -167,7 +167,7 @@ export const projectData : ProjectDataType[] = [
         github: "https://github.com/Zaniew1/NODE-Auth"
     },
     {
-        id: 5,
+        id: 4,
         title: "Blog",
         type:"Full-stack",
          technologies: [
@@ -197,7 +197,7 @@ export const projectData : ProjectDataType[] = [
         github: "https://github.com/Zaniew1/MERN-Blog"
     },
     {
-        id: 6,
+        id: 5,
         title: "Pomodoro",
         type:"Front-end",
          technologies: [

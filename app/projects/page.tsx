@@ -3,13 +3,14 @@ import { LeftLine } from "@/components/molecules/LeftLine/LeftLine";
 import { RightLine } from "@/components/molecules/RightLine/RightLine";
 import { Nav } from "@/components/organisms/Nav/Nav";
 import styles from "./allProjects.module.css";
-import { Layout } from "@/components/molecules/Layout/Layout";
+import { Layout } from "@/components/atoms/Layout/Layout";
 import { SwipeableDiv } from "@/components/molecules/SwipeableDiv/SwipeableDiv";
 import { useState } from "react";
 import { AnimatePresence, motion} from "motion/react";
 import { projectData } from "@/data/projectData";
 import { ImageContainer } from "@/components/atoms/ImageContainer/ImageContainer";
 import Link from "next/link";
+import { SectionHeader } from "@/components/atoms/SectionHeader/SectionHeader";
  function ProjectsPage () {
       const [switchText, setSwitchText]  = useState<number>(0);
       const swipeLeft = () => {
@@ -31,7 +32,7 @@ import Link from "next/link";
         <Nav></Nav>
          <Layout>
             <div className={styles.projects}>
-              <h1 className={styles.projects__header}>Wszystkie moje projekty</h1>
+              <SectionHeader>Wszystkie moje projekty</SectionHeader>
               <div className={styles.projects__text__switch}>
                 <p onClick={()=>setSwitchText(0)} className={`${styles.projects__text__switch__item} ${switchText == 0 ? `${styles.projects__text__switch__item__active}`: ""}`}>Frontend</p>
                 <p onClick={()=>setSwitchText(1)} className={`${styles.projects__text__switch__item} ${switchText == 1 ? `${styles.projects__text__switch__item__active}`: ""}`}>Backend</p>
@@ -55,6 +56,18 @@ import Link from "next/link";
                                     className={styles.projects__swipeable__wrapper__div}
                                   >
                                     <Link className={styles.projects__swipeable__wrapper__link}  href={"/projects/"+el.id}>
+                                        <span className={styles.projects__swipeable__wrapper__link__hover__bgc}></span>
+                                      <div className={styles.projects__swipeable__wrapper__link__animations}>
+                                        <span className={styles.projects__swipeable__wrapper__link__hover__one}></span> 
+                                        <span className={styles.projects__swipeable__wrapper__link__hover__one__half}></span> 
+                                        <span className={styles.projects__swipeable__wrapper__link__hover__two}></span>
+                                        <span className={styles.projects__swipeable__wrapper__link__hover__three}></span>
+                                        <span className={styles.projects__swipeable__wrapper__link__hover__three__half}></span>
+                                        <span className={styles.projects__swipeable__wrapper__link__hover__four}></span>
+                                        <span className={styles.projects__swipeable__wrapper__link__hover}>
+                                          {el.title}
+                                        </span>
+                                      </div>
                                       <ImageContainer fill src={"/"+el.images[0]} alt={el.title}/>
                                     </Link>
                                   </motion.div>
@@ -78,6 +91,18 @@ import Link from "next/link";
                                     className={styles.projects__swipeable__wrapper__div}
                                   >
                                     <Link className={styles.projects__swipeable__wrapper__link} href={"/projects/"+el.id}>
+                                        <span className={styles.projects__swipeable__wrapper__link__hover__bgc}></span>
+                                      <div className={styles.projects__swipeable__wrapper__link__animations}>
+                                        <span className={styles.projects__swipeable__wrapper__link__hover__one}></span> 
+                                        <span className={styles.projects__swipeable__wrapper__link__hover__one__half}></span> 
+                                        <span className={styles.projects__swipeable__wrapper__link__hover__two}></span>
+                                        <span className={styles.projects__swipeable__wrapper__link__hover__three}></span>
+                                        <span className={styles.projects__swipeable__wrapper__link__hover__three__half}></span>
+                                        <span className={styles.projects__swipeable__wrapper__link__hover__four}></span>
+                                        <span className={styles.projects__swipeable__wrapper__link__hover}>
+                                          {el.title}
+                                        </span>
+                                      </div>
                                       <ImageContainer  fill src={"/"+el.images[0]} alt={el.title}/>
                                     </Link>
                                   </motion.div>
@@ -101,14 +126,18 @@ import Link from "next/link";
                                     className={styles.projects__swipeable__wrapper__div}
                                   >
                                   <Link className={styles.projects__swipeable__wrapper__link} key={el.id} href={"/projects/"+el.id}>
-                                      <span className={styles.projects__swipeable__wrapper__link__hover__one}></span>
-                                      <span className={styles.projects__swipeable__wrapper__link__hover__two}></span>
-                                      <span className={styles.projects__swipeable__wrapper__link__hover__three}></span>
-                                      <span className={styles.projects__swipeable__wrapper__link__hover__four}></span>
-                                      <span className={styles.projects__swipeable__wrapper__link__hover__bgc}></span>
-                                      <span className={styles.projects__swipeable__wrapper__link__hover}>
-                                        {el.title}
-                                      </span>
+                                        <span className={styles.projects__swipeable__wrapper__link__hover__bgc}></span>
+                                      <div className={styles.projects__swipeable__wrapper__link__animations}>
+                                        <span className={styles.projects__swipeable__wrapper__link__hover__one}></span> 
+                                        <span className={styles.projects__swipeable__wrapper__link__hover__one__half}></span> 
+                                        <span className={styles.projects__swipeable__wrapper__link__hover__two}></span>
+                                        <span className={styles.projects__swipeable__wrapper__link__hover__three}></span>
+                                        <span className={styles.projects__swipeable__wrapper__link__hover__three__half}></span>
+                                        <span className={styles.projects__swipeable__wrapper__link__hover__four}></span>
+                                        <span className={styles.projects__swipeable__wrapper__link__hover}>
+                                          {el.title}
+                                        </span>
+                                      </div>
                                       <ImageContainer fill src={"/"+el.images[0]} alt={el.title}/>
                                       </Link>
                                   </motion.div>

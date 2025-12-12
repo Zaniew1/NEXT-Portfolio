@@ -9,49 +9,36 @@ import { ImageContainer } from '@/components/atoms/ImageContainer/ImageContainer
 import Link from 'next/link';
 import { AnimatePresence, motion } from 'motion/react';
 import { SwipeableDiv } from '@/components/molecules/SwipeableDiv/SwipeableDiv';
+import { SectionHeader } from '@/components/atoms/SectionHeader/SectionHeader';
 export const Projects = () => {
-    const [projectIndex, setProjectIndex] = useState<number>(1);
+    const [projectIndex, setProjectIndex] = useState<number>(0);
   const [isAnimating, setAnimating] = useState<number>(0);
    
-    const handlePrev = () => {
-        if(projectIndex === 1){
-            return projectData.length-1;
-        }else{
-            return projectIndex-1
-        }
+    const getIndex = (newIndex:number) => {
+        const max = projectData.length;
+        return (newIndex + max) % max; // cykliczny wrap-around
     };
-    const handleNext = () => {
-        if(projectIndex === projectData.length-1){
-            return 1;
-        }else{
-            return projectIndex+1
-        }
+    const handlePrev = () => getIndex(projectIndex- 1);
+    const handleNext = () => getIndex(projectIndex+ 1);
+    const changeProject = (newIndex:number) => {
+        setAnimating(newIndex);
+        setTimeout(() => {
+            setProjectIndex(newIndex);
+        }, 700);
     };
-    const changeProjectToPrevious = () =>{
-        setAnimating(handlePrev())
-        setTimeout(() => {
-            setProjectIndex(handlePrev());
-        }, 700);
-    }
-    const changeProjectToNext = () =>{
-        setAnimating(handleNext())
-        setTimeout(() => {
-            setProjectIndex(handleNext());
-        }, 700);
-    }
     return (
         <div className={styles.projects} id={"projects"}>
-            <h1 className={styles.projects__header}>Projekty</h1 >
+            <SectionHeader>Projekty</SectionHeader>
 
-                <SwipeableDiv onSwipeLeft={changeProjectToNext} onSwipeRight={changeProjectToPrevious} >
+                <SwipeableDiv onSwipeLeft={()=>changeProject(handleNext())} onSwipeRight={()=>changeProject(handlePrev())} >
             <div className={styles.projects__main}>
                     <div className={styles.projects__main__navigation}>
                         <ProjectNavigationSmall index={projectIndex} isAnimating={isAnimating} setIndex={setProjectIndex} setAnimating={setAnimating}/>
                         <ProjectNameInfo index={projectIndex} setIndex={setProjectIndex} isAnimating={isAnimating}/>
                     </div>
                     <AnimatePresence mode="wait">
-                    
                         <div className={styles.projects__main__view}>
+                            {/* This is a mask that covers the photo during change */}
                             <motion.div
                                 key={isAnimating}  
                                 initial={{ width: 0 }}
@@ -65,13 +52,13 @@ export const Projects = () => {
                                 className={styles.projects__main__view__mask}>
                             </motion.div>
                             <Link className={styles.projects__main__view__link} href={"projects/"+projectIndex}>
-                                <ImageContainer  src={`/${projectData[projectIndex-1].images[0]}`} alt={'asd'} fill/>
+                                <ImageContainer  src={`/${projectData[projectIndex].images[0]}`} alt={'asd'} fill/>
                             </Link>
                         </div>
                     </AnimatePresence>
             </div>
                 </SwipeableDiv>
-            <ProjectNav index={projectIndex} setIndex={setProjectIndex} isAnimating={isAnimating} setAnimating={setAnimating}/>
+            <ProjectNav changeProjectNext={()=>changeProject(handleNext())} changeProjectPrev={()=>changeProject(handlePrev())} index={projectIndex} setIndex={setProjectIndex} isAnimating={isAnimating} setAnimating={setAnimating}/>
 
         </div>
     )

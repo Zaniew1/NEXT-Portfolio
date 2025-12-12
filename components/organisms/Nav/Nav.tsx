@@ -1,7 +1,7 @@
 "use client"
 import Link from "next/link";
 import styles from "./Nav.module.css";
-import { Burger } from "@/components/molecules/Burger/Burger";
+import { Burger } from "@/components/atoms/Burger/Burger";
 import { NavMobile } from "../NavMobile/NavMobile";
 import { useState } from "react";
 import { usePathname } from "next/navigation";

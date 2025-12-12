@@ -3,11 +3,12 @@ import { useState } from 'react'
 import styles from './Tech.module.css'
 import { techData } from '@/data/techData'
 import {  motion } from "motion/react"
+import { SectionHeader } from '@/components/atoms/SectionHeader/SectionHeader'
 export const Tech = () => {
     const [techIndex, setTechIndex]= useState<number>(0)
         return (
         <div className={styles.tech} id={"tech"}>
-            <h1 className={styles.tech__header}>Technologie</h1 >
+            <SectionHeader>Technologie</SectionHeader>
             <div className={styles.tech__main}> 
                 <div className={styles.tech__main__nav}>
                    {techData.map((el, index)=>{

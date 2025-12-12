@@ -5,7 +5,7 @@
 }
 
 .cardscroll__page {
-  height: calc(100vh - var(--topnav-height));
+  height: 100vh;
   margin-top:  var(--topnav-height);
   width: 100%;
   position: absolute;
@@ -17,4 +17,9 @@
 @keyframes slideUp {
   from { transform: translateY(0); }
   to   { transform: translateY(-100vh); }
+}
+@media screen and (width >= 768px) {
+   
+
+ 
 }

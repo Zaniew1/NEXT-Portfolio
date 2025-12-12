@@ -1,6 +1,7 @@
 "use client"
 import { useState } from 'react'
 import styles from './Contact.module.css'
+import { SectionHeader } from '@/components/atoms/SectionHeader/SectionHeader';
 
 export const Contact = () => {
     const [validName , setValidName] = useState<boolean>(false);
@@ -45,7 +46,7 @@ export const Contact = () => {
     return (
 
         <div className={styles.contact} id={"contact"}>
-            <h1 className={styles.contact__header}>Kontakt</h1 >
+            <SectionHeader>Kontakt</SectionHeader>
             <form className={styles.contact__form} onSubmit={sendText}>
                 <div className={styles.contact__form__line}>
                     <label htmlFor='form__name' className={styles.contact__form__line__label}>Imię</label>

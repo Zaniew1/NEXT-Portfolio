@@ -10,8 +10,8 @@ export const ExperienceCard = (props: {data:ExperienceDataType}) => {
             </div>
             <div className={styles.card__text}>
                 <Link className={styles.card__text__name} href={props.data.companyWebsite} >{props.data.company}</Link>
-                <div className={styles.card__text__data}>05.2022 - obecnie</div>
-                <p className={styles.card__text__position}>Fullstack Developer</p>
+                <div className={styles.card__text__data}>{props.data.duration}</div>
+                <p className={styles.card__text__position}>{props.data.position}</p>
                 <div className={styles.card__text__tech}>
                     {props.data.technologies.map((technology)=>
                         <div key={technology.tech} className={styles.card__text__tech__icon}>

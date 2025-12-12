@@ -1,0 +1,10 @@
+.arrow{
+    display: flex;
+    width: 1.5em;
+    height: 1.5em;
+    cursor: pointer;
+}
+.arrow:hover{
+    color: var(--special-color);
+}
+

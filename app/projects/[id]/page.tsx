@@ -4,14 +4,13 @@ import { RightLine } from "@/components/molecules/RightLine/RightLine";
 import { Nav } from "@/components/organisms/Nav/Nav";
 import styles from './singleProject.module.css'
 import { projectData } from "@/data/projectData";
-// import {ProjectDataType} from '../../../data/projectData'
 import { useParams } from 'next/navigation';
 import { ImageCarousel } from "@/components/molecules/ImageCarousel/ImageCarousel";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
 import { BsEye } from "react-icons/bs";
 import { ImageContainer } from "@/components/atoms/ImageContainer/ImageContainer";
-type Params = { [key: string]: string };
+import { SectionHeader } from "@/components/atoms/SectionHeader/SectionHeader";
 function ProjectPage() {
   const queryParams = useParams();
   const projectId = queryParams.id
@@ -24,7 +23,7 @@ function ProjectPage() {
     <div >
       <Nav></Nav>
       <div className={styles.project}>
-        <h1 className={styles.project__header}>{title}</h1>
+        <SectionHeader>{title}</SectionHeader>
         <p className={styles.project__type}>{type}</p>
         <div className={styles.project__links}>
           {github && <Link href={github}><FaGithub/>GitHub</Link>}
