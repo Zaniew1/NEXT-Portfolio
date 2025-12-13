@@ -39,7 +39,6 @@ import { SectionHeader } from "@/components/atoms/SectionHeader/SectionHeader";
                 <p onClick={()=>setSwitchText(2)} className={`${styles.projects__text__switch__item} ${switchText == 2 ? `${styles.projects__text__switch__item__active}`: ""}`}>Fullstack</p>
               </div>
               <div className={styles.projects__text__wrapper}>
-                <AnimatePresence mode="wait" initial={false}>
 
                   { switchText == 0 && 
                       <SwipeableDiv 
@@ -49,29 +48,31 @@ import { SectionHeader } from "@/components/atoms/SectionHeader/SectionHeader";
                           <div className={styles.projects__swipeable__wrapper}>
                               {frontEndProjects?.map((el,index)=>{
                                 return (
-                                  <motion.div key={el.id}
-                                    initial={{opacity: 0, x:-50}}
-                                    animate={{opacity: 1, x:0}}
-                                    transition={{ delay: (index+1)/15, duration: 0.4, ease: "easeInOut" }}
-                                    className={styles.projects__swipeable__wrapper__div}
-                                  >
-                                    <Link className={styles.projects__swipeable__wrapper__link}  href={"/projects/"+el.id}>
-                                        <span className={styles.projects__swipeable__wrapper__link__hover__bgc}></span>
-                                      <div className={styles.projects__swipeable__wrapper__link__animations}>
-                                        <span className={styles.projects__swipeable__wrapper__link__hover__one}></span> 
-                                        <span className={styles.projects__swipeable__wrapper__link__hover__one__half}></span> 
-                                        <span className={styles.projects__swipeable__wrapper__link__hover__two}></span>
-                                        <span className={styles.projects__swipeable__wrapper__link__hover__three}></span>
-                                        <span className={styles.projects__swipeable__wrapper__link__hover__three__half}></span>
-                                        <span className={styles.projects__swipeable__wrapper__link__hover__four}></span>
-                                        <span className={styles.projects__swipeable__wrapper__link__hover}>
-                                          {el.title}
-                                        </span>
-                                      </div>
-                                      <ImageContainer fill src={"/"+el.images[0]} alt={el.title}/>
-                                    </Link>
-                                  </motion.div>
+                                    <motion.div 
+                                      key={el.id+"front"}
+                                      initial={{opacity: 0, x:-50}}
+                                      animate={{opacity: 1, x:0}}
+                                      transition={{ delay: (index+1)/15, duration: 0.4, ease: "easeInOut" }}
+                                      className={styles.projects__swipeable__wrapper__div}
+                                    >
+                                      <Link className={styles.projects__swipeable__wrapper__link}  href={"/projects/"+el.id}>
+                                          <span className={styles.projects__swipeable__wrapper__link__hover__bgc}></span>
+                                        <div className={styles.projects__swipeable__wrapper__link__animations}>
+                                          <span className={styles.projects__swipeable__wrapper__link__hover__one}></span> 
+                                          <span className={styles.projects__swipeable__wrapper__link__hover__one__half}></span> 
+                                          <span className={styles.projects__swipeable__wrapper__link__hover__two}></span>
+                                          <span className={styles.projects__swipeable__wrapper__link__hover__three}></span>
+                                          <span className={styles.projects__swipeable__wrapper__link__hover__three__half}></span>
+                                          <span className={styles.projects__swipeable__wrapper__link__hover__four}></span>
+                                          <span className={styles.projects__swipeable__wrapper__link__hover}>
+                                            {el.title}
+                                          </span>
+                                        </div>
+                                        <ImageContainer fill src={"/"+el.images[0]} alt={el.title}/>
+                                      </Link>
+                                    </motion.div>
                                 )
+                                
                               })}
                           </div>
                       </SwipeableDiv>
@@ -82,32 +83,36 @@ import { SectionHeader } from "@/components/atoms/SectionHeader/SectionHeader";
                           onSwipeRight={swipeRight}
                           className={styles.projects__swipeable}>
                        <div className={styles.projects__swipeable__wrapper}>
+
                         {backEndProjects?.map((el,index)=>{
                                 return (
-                                  <motion.div key={el.id}
-                                    initial={{opacity: 0, y:50}}
-                                    animate={{opacity: 1, y:0}}
-                                    transition={{  delay: (index+1)/15, duration: 0.4, ease: "easeInOut" }}
-                                    className={styles.projects__swipeable__wrapper__div}
-                                  >
-                                    <Link className={styles.projects__swipeable__wrapper__link} href={"/projects/"+el.id}>
-                                        <span className={styles.projects__swipeable__wrapper__link__hover__bgc}></span>
-                                      <div className={styles.projects__swipeable__wrapper__link__animations}>
-                                        <span className={styles.projects__swipeable__wrapper__link__hover__one}></span> 
-                                        <span className={styles.projects__swipeable__wrapper__link__hover__one__half}></span> 
-                                        <span className={styles.projects__swipeable__wrapper__link__hover__two}></span>
-                                        <span className={styles.projects__swipeable__wrapper__link__hover__three}></span>
-                                        <span className={styles.projects__swipeable__wrapper__link__hover__three__half}></span>
-                                        <span className={styles.projects__swipeable__wrapper__link__hover__four}></span>
-                                        <span className={styles.projects__swipeable__wrapper__link__hover}>
-                                          {el.title}
-                                        </span>
-                                      </div>
-                                      <ImageContainer  fill src={"/"+el.images[0]} alt={el.title}/>
-                                    </Link>
-                                  </motion.div>
+                                    <motion.div
+                                      key={"fullstack"+el.id}
+                                      initial={{opacity: 0, y:50}}
+                                      animate={{opacity: 1, y:0}}
+                                      transition={{  delay: (index+1)/15, duration: 0.4, ease: "easeInOut" }}
+                                      className={styles.projects__swipeable__wrapper__div}
+                                    >
+                                      <Link className={styles.projects__swipeable__wrapper__link} href={"/projects/"+el.id}>
+                                          <span className={styles.projects__swipeable__wrapper__link__hover__bgc}></span>
+                                        <div className={styles.projects__swipeable__wrapper__link__animations}>
+                                          <span className={styles.projects__swipeable__wrapper__link__hover__one}></span> 
+                                          <span className={styles.projects__swipeable__wrapper__link__hover__one__half}></span> 
+                                          <span className={styles.projects__swipeable__wrapper__link__hover__two}></span>
+                                          <span className={styles.projects__swipeable__wrapper__link__hover__three}></span>
+                                          <span className={styles.projects__swipeable__wrapper__link__hover__three__half}></span>
+                                          <span className={styles.projects__swipeable__wrapper__link__hover__four}></span>
+                                          <span className={styles.projects__swipeable__wrapper__link__hover}>
+                                            {el.title}
+                                          </span>
+                                        </div>
+                                        <ImageContainer  fill src={"/"+el.images[0]} alt={el.title}/>
+                                      </Link>
+                                    </motion.div>
+
                                 )
                               })}
+
                        </div>
                     </SwipeableDiv>
                   }
@@ -119,13 +124,14 @@ import { SectionHeader } from "@/components/atoms/SectionHeader/SectionHeader";
                       <div className={styles.projects__swipeable__wrapper}>
                         {fullStackProjects?.map((el,index)=>{
                                 return (
-                                    <motion.div key={el.id}
+                                    <motion.div 
+                                    key={el.id+"Fullstack"}
                                     initial={{opacity: 0, x:50}}
                                     animate={{opacity: 1, x:0}}
                                     transition={{ delay: (index+1)/15, duration: 0.4, ease: "easeInOut" }}
                                     className={styles.projects__swipeable__wrapper__div}
                                   >
-                                  <Link className={styles.projects__swipeable__wrapper__link} key={el.id} href={"/projects/"+el.id}>
+                                  <Link className={styles.projects__swipeable__wrapper__link}  href={"/projects/"+el.id}>
                                         <span className={styles.projects__swipeable__wrapper__link__hover__bgc}></span>
                                       <div className={styles.projects__swipeable__wrapper__link__animations}>
                                         <span className={styles.projects__swipeable__wrapper__link__hover__one}></span> 
@@ -146,7 +152,6 @@ import { SectionHeader } from "@/components/atoms/SectionHeader/SectionHeader";
                       </div>
                     </SwipeableDiv>
                   }
-                </AnimatePresence>
 
               </div>
             </div>
