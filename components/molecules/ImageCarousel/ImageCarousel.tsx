@@ -3,7 +3,7 @@ import { ImageContainer } from "@/components/atoms/ImageContainer/ImageContainer
 import Slider from "react-slick";
 import styles from './ImageCarousel.module.css'
 import { Arrow, } from "@/components/atoms/Arrow/Arrow";
-import { useEffect, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 type CarouselType = {
     images: string[]
 }
@@ -23,7 +23,7 @@ export const ImageCarousel = (props:CarouselType) =>{
     },[])
 
     const settings = {
-        dots: true,
+        dots: false,
         infinite: true,
         swipeToSlide: true,
         slidesToShow: initialSlidesToShow,  
@@ -32,6 +32,30 @@ export const ImageCarousel = (props:CarouselType) =>{
         nextArrow: <Arrow  />,
         prevArrow: <Arrow />,
         mobileFirst: true,
+        appendDots: (dots:ReactNode) => (
+            <div
+            style={{
+            backgroundColor: "transparent",
+            borderRadius: "10px",
+            padding: "10px"
+            }}
+        >
+            <ul style={{ margin: "0px" }}> {dots} </ul>
+        </div>
+        ),
+        customPaging: (i:number) => (
+        <div
+            style={{
+            width: "30px",
+            height: "30px",
+            color: "red",
+            backgroundColor: "#000",
+            border: "1px #fff solid",
+            borderRadius: "50%",
+            }}
+        >
+        </div>
+        ),
         responsive: [
             {
                breakpoint: 9999,         // ≤ 1280px
@@ -68,7 +92,7 @@ export const ImageCarousel = (props:CarouselType) =>{
             }
             {props.images.length == 1 && 
                 <div className={styles.carousel__item__single}>
-                    <ImageContainer  src={`/${props.images[0]}`} fill={true} alt={`Zdjęcie poglądowe projektu`}/>
+                    <ImageContainer style={{objectFit: "contain"}}  src={`/${props.images[0]}`} fill={true} alt={`Zdjęcie poglądowe projektu`}/>
                 </div>
             }
         </div>

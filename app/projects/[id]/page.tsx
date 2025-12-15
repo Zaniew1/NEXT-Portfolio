@@ -18,7 +18,7 @@ function ProjectPage() {
   if (!project) {
     throw new Error("Project not found");
   }
-  const {title, type, technologies, images, github, view,  content } = project;
+  const {title, type, technologies, images, github, view,description,  content } = project;
   return (
     <div >
       <Nav></Nav>
@@ -30,9 +30,9 @@ function ProjectPage() {
           {view && <Link href={view}><BsEye/>Podgląd</Link>}
         </div>
         <ImageCarousel images={images}/>
-        {/* <p className={styles.project__desc}>
+        <p className={styles.project__desc}>
             {description}
-        </p> */}
+        </p>
         <div className={styles.project__tech}>
           {technologies?.map((tech, index)=>{
             const colorStyle = tech.color      
