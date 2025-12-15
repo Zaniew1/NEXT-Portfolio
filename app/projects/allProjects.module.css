@@ -10,6 +10,7 @@
     align-items: center;
     top: 0;
     left: 0;
+    padding: 1em;
 }
 .projects__header{
     font-size: 1.5em;
@@ -65,11 +66,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     width: 100%;
     overflow: visible;
 }
 .projects__swipeable__wrapper__div{
+    display: flex;
     position: relative;
     width: 100%;
     aspect-ratio: 16/9;
@@ -271,7 +274,10 @@
 
 @media screen and (width >= 700px) {
 .projects__swipeable__wrapper{
+   
     flex-direction: row;
+    flex-grow: 1;
+    flex-wrap: wrap;
 }
 .projects__header{
     margin: 1.5em 1em 2em  1em
@@ -284,7 +290,19 @@
 
 }
 .projects__swipeable__wrapper__div{
-    max-width: 80%;
+    width: 40%;
+    max-width: 50%;
+    flex-grow: 1;
 }
 
+
+
+
+}
+
+@media screen and (width >= 1440px) {
+.projects__swipeable__wrapper__div{
+    width: 30%;
+    max-width: 33%;
+}
 }

@@ -42,8 +42,8 @@ import { SectionHeader } from "@/components/atoms/SectionHeader/SectionHeader";
 
                   { switchText == 0 && 
                       <SwipeableDiv 
-                        onSwipeLeft={swipeLeft} 
-                        onSwipeRight={swipeRight}
+                        onSwipeLeft={swipeRight} 
+                        onSwipeRight={swipeLeft}
                         className={styles.projects__swipeable}> 
                           <div className={styles.projects__swipeable__wrapper}>
                               {frontEndProjects?.map((el,index)=>{
@@ -79,8 +79,8 @@ import { SectionHeader } from "@/components/atoms/SectionHeader/SectionHeader";
                   }
                   { switchText == 1 && 
                     <SwipeableDiv 
-                          onSwipeLeft={swipeLeft} 
-                          onSwipeRight={swipeRight}
+                          onSwipeLeft={swipeRight} 
+                          onSwipeRight={swipeLeft}
                           className={styles.projects__swipeable}>
                        <div className={styles.projects__swipeable__wrapper}>
 
@@ -118,8 +118,8 @@ import { SectionHeader } from "@/components/atoms/SectionHeader/SectionHeader";
                   }
                   { switchText == 2 &&
                   <SwipeableDiv 
-                        onSwipeLeft={swipeLeft} 
-                        onSwipeRight={swipeRight}
+                        onSwipeLeft={swipeRight} 
+                        onSwipeRight={swipeLeft}
                         className={styles.projects__swipeable}>
                       <div className={styles.projects__swipeable__wrapper}>
                         {fullStackProjects?.map((el,index)=>{

@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { CSSProperties, useState } from "react"
 import styles from './SwipeableDiv.module.css'
 import { HTMLMotionProps, motion } from "motion/react";
 export type SwipeableDivProps = React.PropsWithChildren<{
@@ -6,9 +6,11 @@ export type SwipeableDivProps = React.PropsWithChildren<{
     onSwipeRight?: ()=> void;
     onSwipeTop?: ()=> void;
     onSwipeBottom?: ()=> void;
+    style?: CSSProperties;
 }> &  HTMLMotionProps<"div">;
 
 export const SwipeableDiv: React.FC<SwipeableDivProps> = ({
+  style,
   children,
   onSwipeLeft,
   onSwipeRight,
@@ -58,5 +60,5 @@ export const SwipeableDiv: React.FC<SwipeableDivProps> = ({
     }
 
 
-    return <motion.div   {...rest}  className={styles.swipable} onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd} >{children}</motion.div>
+    return <motion.div   {...rest} style={style} className={styles.swipable} onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd} >{children}</motion.div>
 }
