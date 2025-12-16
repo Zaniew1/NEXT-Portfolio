@@ -11,6 +11,7 @@ import { FaGithub } from "react-icons/fa";
 import { BsEye } from "react-icons/bs";
 import { ImageContainer } from "@/components/atoms/ImageContainer/ImageContainer";
 import { SectionHeader } from "@/components/atoms/SectionHeader/SectionHeader";
+// import { ImageMagnify } from "@/components/atoms/ImageMagnify/ImageMagnify";
 function ProjectPage() {
   const queryParams = useParams();
   const projectId = queryParams.id
@@ -18,21 +19,19 @@ function ProjectPage() {
   if (!project) {
     throw new Error("Project not found");
   }
-  const {title, type, technologies, images, github, view,description,  content } = project;
+  const {title, type, technologies, images, github, view,  content } = project;
   return (
     <div >
       <Nav></Nav>
       <div className={styles.project}>
         <SectionHeader>{title}</SectionHeader>
         <p className={styles.project__type}>{type}</p>
+          
         <div className={styles.project__links}>
           {github && <Link href={github}><FaGithub/>GitHub</Link>}
           {view && <Link href={view}><BsEye/>Podgląd</Link>}
         </div>
         <ImageCarousel images={images}/>
-        <p className={styles.project__desc}>
-            {description}
-        </p>
         <div className={styles.project__tech}>
           {technologies?.map((tech, index)=>{
             const colorStyle = tech.color      
@@ -50,7 +49,7 @@ function ProjectPage() {
               <div className={styles.project__content__wrapper} key={`key:content__item__${index}`}>
                 {el.header && <h1 className={styles.project__content__wrapper__header}>{el.header}</h1>}
                 {el.text && <p className={styles.project__content__wrapper__text}>{el.text}</p>}
-                {el.image && <ImageContainer src={"/"+el.image} alt={"Zdjęcie opisujące funkcjonalność"} fill/>}
+                {el.image && <ImageContainer src={el.image} alt={"Zdjęcie opisujące funkcjonalność"} fill/>}
                 {el.list && 
                   <ul className={styles.project__content__wrapper__list}>
                     {el.list?.map((li)=>{

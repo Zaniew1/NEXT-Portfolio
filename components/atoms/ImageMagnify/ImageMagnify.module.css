@@ -1,0 +1,53 @@
+.imageContainer{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.imageContainer > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+.magnify{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 20%;
+    left: 50%;
+    width: 30%;
+    height: 30%;
+    transition: .3s ease-in-out;
+    opacity: 0;
+    color: #fff;
+    transform: translate(-50%, -50%);
+     z-index: 999;
+     cursor: pointer;
+}
+.magnify > svg{
+    width: 3rem;
+    height: 3rem;
+}
+.background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: .3s ease-in-out;
+    opacity: 0;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 9;
+}
+.imageContainer:hover .background{
+    opacity: 1;
+}
+.imageContainer:hover > .magnify{
+    top: 50%;
+    opacity: 1;
+}

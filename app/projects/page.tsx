@@ -6,7 +6,7 @@ import styles from "./allProjects.module.css";
 import { Layout } from "@/components/atoms/Layout/Layout";
 import { SwipeableDiv } from "@/components/molecules/SwipeableDiv/SwipeableDiv";
 import { useState } from "react";
-import { AnimatePresence, motion} from "motion/react";
+import {motion} from "motion/react";
 import { projectData } from "@/data/projectData";
 import { ImageContainer } from "@/components/atoms/ImageContainer/ImageContainer";
 import Link from "next/link";
@@ -68,7 +68,7 @@ import { SectionHeader } from "@/components/atoms/SectionHeader/SectionHeader";
                                             {el.title}
                                           </span>
                                         </div>
-                                        <ImageContainer fill src={"/"+el.images[0]} alt={el.title}/>
+                                        <ImageContainer fill src={el.images[0]} alt={el.title}/>
                                       </Link>
                                     </motion.div>
                                 )
@@ -106,7 +106,7 @@ import { SectionHeader } from "@/components/atoms/SectionHeader/SectionHeader";
                                             {el.title}
                                           </span>
                                         </div>
-                                        <ImageContainer  fill src={"/"+el.images[0]} alt={el.title}/>
+                                        <ImageContainer  fill src={el.images[0]} alt={el.title}/>
                                       </Link>
                                     </motion.div>
 
@@ -144,7 +144,7 @@ import { SectionHeader } from "@/components/atoms/SectionHeader/SectionHeader";
                                           {el.title}
                                         </span>
                                       </div>
-                                      <ImageContainer fill src={"/"+el.images[0]} alt={el.title}/>
+                                      <ImageContainer fill src={el.images[0]} alt={el.title}/>
                                       </Link>
                                   </motion.div>
                                 )

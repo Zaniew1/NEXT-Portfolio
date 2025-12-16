@@ -1,9 +1,9 @@
 'use client';
-import { ImageContainer } from "@/components/atoms/ImageContainer/ImageContainer";
 import Slider from "react-slick";
 import styles from './ImageCarousel.module.css'
 import { Arrow, } from "@/components/atoms/Arrow/Arrow";
 import { ReactNode, useEffect, useState } from "react";
+import { ImageMagnify } from "@/components/atoms/ImageMagnify/ImageMagnify";
 type CarouselType = {
     images: string[]
 }
@@ -82,9 +82,10 @@ export const ImageCarousel = (props:CarouselType) =>{
             {props.images.length > 1 && 
             <Slider {...settings}>
                 {props.images.map((image, index)=>{
+                    console.log(props.images)
                     return(
                         <div key={index+1} className={styles.carousel__item}>
-                            <ImageContainer  src={`/${image}`} fill={true} alt={`Zdjęcie poglądowe projektu nr ${index+1}`}/>
+                            <ImageMagnify fill  src={`${image}`} alt={`Zdjęcie poglądowe projektu nr ${index+1}`} slideIndex={index+1} sources={[...props.images]}/>
                         </div>
                     )
                 })}
@@ -92,7 +93,7 @@ export const ImageCarousel = (props:CarouselType) =>{
             }
             {props.images.length == 1 && 
                 <div className={styles.carousel__item__single}>
-                    <ImageContainer style={{objectFit: "contain"}}  src={`/${props.images[0]}`} fill={true} alt={`Zdjęcie poglądowe projektu`}/>
+                    <ImageMagnify fill  src={`${props.images[0]}`} alt={'Zdjęcie poglądowe projektu'} sources={["/Auth/1.png","/Auth/2.png","/Auth/3.png"]}/>
                 </div>
             }
         </div>

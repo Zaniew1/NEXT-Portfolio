@@ -26,7 +26,7 @@ export const ProjectNavImage = (props:ProjectNavImageType)=>{
                             delay: 0,      
                         }}
                         className={props.position === "left" ? styles.projectNav__wrapper__image__mask__left : styles.projectNav__wrapper__image__mask__right}></motion.div>
-                        <ImageContainer style={{borderRadius: "10px 0 10px 0"}} src={`/${props.previousProject.images[0]}`} alt={'asd'} fill/>
+                        <ImageContainer style={{borderRadius: "10px 0 10px 0"}} src={`${props.previousProject.images[0]}`} alt={'asd'} fill/>
                 </div>
                 <span className={styles.projectNav__wrapper__navigation}>{props.text}</span>
                 <motion.span 

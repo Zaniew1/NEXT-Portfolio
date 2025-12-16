@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { MobileNavPropsType, NavIndexTypeOptional } from '../Nav/Nav'
 import styles from './NavMobile.module.css'
 import { Linkedin, Github } from 'lucide-react';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 export const NavMobile = (props: MobileNavPropsType & NavIndexTypeOptional)=>{
     const sectionToIndex: Record<string, number> = {
         about: 0,
@@ -11,16 +11,20 @@ export const NavMobile = (props: MobileNavPropsType & NavIndexTypeOptional)=>{
         experience: 3,
         contact: 4
     }
+    const pathname = usePathname();
+    const router = useRouter();
     const navigateAndClose = (id: string) =>{
         props.setActive(false);
-        setTimeout(() => {
-            const targetIndex = sectionToIndex[id];
-            if(props.setNavIndex){
-                props.setNavIndex(targetIndex);
+        const targetIndex = sectionToIndex[id];
+        if (pathname !== "/") {
+                router.push("/")
+                props.setNavIndex?.(targetIndex);
+            } else {
+                setTimeout(() => {
+                    props.setNavIndex?.(targetIndex);
+                }, 200);
             }
-        }, 200);
     }
-    const pathname = usePathname();
     return (
         <div className={`${styles.navmobile} ${props.active ? styles.navmobile__active : ""}`}>
             <ul className={styles.navmobile__list}>
