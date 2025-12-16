@@ -35,14 +35,14 @@ export const ProjectNav = (props: ProjectNavType) =>{
 
            <ProjectNavImage position={"left"} previousProject={previousProject} text={"Poprzedni projekt"} isAnimating={props.isAnimating} changeProject={()=>props.changeProjectPrev()} />
             <div className={styles.projectNav__middle}>
-                <Arrow onClick={()=>props.changeProjectPrev()} style={{transform: "rotate(180deg)"}}></Arrow>
+                <Arrow onClick={()=>props.changeProjectPrev()} orientation="left"></Arrow>
                 <Link href={'/projects'}>
                     <p className={styles.projectNav__text} >
                         <AnimatedText text="Zobacz wszystkie projekty" />
                         <span className={styles.projectNav__text__span}></span>
                     </p>
                 </Link>
-                <Arrow onClick={() => props.changeProjectNext()} ></Arrow>
+                <Arrow onClick={() => props.changeProjectNext()} orientation="right" ></Arrow>
             </div>
            <ProjectNavImage position={"right"} previousProject={nextProject} text={"Następny projekt"} isAnimating={props.isAnimating} changeProject={()=>props.changeProjectNext()} />
             

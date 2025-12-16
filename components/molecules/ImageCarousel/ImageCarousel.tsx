@@ -29,8 +29,8 @@ export const ImageCarousel = (props:CarouselType) =>{
         slidesToShow: initialSlidesToShow,  
         slidesToScroll: 1,   
         initialSlide: 0,         // default: desktop >1280
-        nextArrow: <Arrow  />,
-        prevArrow: <Arrow />,
+        nextArrow: <Arrow orientation="right"  />,
+        prevArrow: <Arrow orientation="left"  />,
         mobileFirst: true,
         appendDots: (dots:ReactNode) => (
             <div

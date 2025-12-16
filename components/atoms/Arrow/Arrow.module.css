@@ -8,3 +8,6 @@
     color: var(--special-color);
 }
 
+.arrow__left{
+    transform: rotate(180deg)
+}

@@ -1,6 +1,14 @@
 .carousel{
     width: 80%;
     height: 400px;
+    :global(.slick-slider.slick-initialized) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    :global(.slick-list){
+        margin: 0 0.2em
+    }
 }
 .carousel__item{
     margin: 1em;
@@ -18,8 +26,19 @@
     cursor: pointer;
     max-width: 900px;
 }
+@media screen and (width >= 768px) {
+    .carousel{
+        :global(.slick-list){
+            margin: 0 1em
+        }
+    }
+}
 @media screen and (width >= 1480px) {
     .carousel{
         height: 500px;
+        :global(.slick-list){
+            margin: 0 2em
+        }
     }
 }
+ 
