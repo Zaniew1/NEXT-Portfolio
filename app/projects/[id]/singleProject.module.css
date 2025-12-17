@@ -89,12 +89,6 @@
     font-size: 1.6em;
     margin-bottom: 0.5em;
 }
-.slick-slider {
-  display: flex !important;
-  justify-content: center !important;
-  flex-direction: row !important;
-  align-items: center !important;
-}
 @media screen and (width >= 768px) {
     .project__content{
        

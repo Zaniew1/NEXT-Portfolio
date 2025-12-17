@@ -17,10 +17,14 @@ export const ImageCarousel = (props:CarouselType) =>{
             }else if(width < 1280){
                 setInitialSlidesToShow(2)
             }else if(width >= 1280){
-                setInitialSlidesToShow(3)
+                if(props.images.length < 3){
+                    setInitialSlidesToShow(2)
+                }else{
+                    setInitialSlidesToShow(3)
+                }
             }
         }, 0)
-    },[])
+    },[props.images.length])
 
     const settings = {
         dots: false,

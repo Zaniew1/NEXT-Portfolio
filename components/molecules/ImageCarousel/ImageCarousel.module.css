@@ -7,6 +7,7 @@
         align-items: center;
     }
     :global(.slick-list){
+        width: 100%;
         margin: 0 0.2em
     }
 }
@@ -31,6 +32,9 @@
         :global(.slick-list){
             margin: 0 1em
         }
+         :global(.slick-track){
+            margin: 0 auto
+        }
     }
 }
 @media screen and (width >= 1480px) {
@@ -38,6 +42,9 @@
         height: 500px;
         :global(.slick-list){
             margin: 0 2em
+        }
+        :global(.slick-track){
+            margin: 0 auto
         }
     }
 }
