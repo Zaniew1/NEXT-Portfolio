@@ -42,6 +42,7 @@
     left:0;
     width: 100%;
     height: 100%;
+    border-radius: 0;
     background-color: #000;
     z-index: 10;
 }
@@ -52,6 +53,14 @@
     width: 100%;
     height: 100%;
     z-index: 5;
+}
+.projects__main__view__link > div{
+    border-radius: 10px;
+
+}
+.projects__main__view__link > div >img{
+    border-radius: 10px;
+
 }
 .projects__main__nav{
     

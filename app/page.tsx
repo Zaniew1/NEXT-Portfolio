@@ -24,19 +24,19 @@ export default function Home() {
       <main className="main">
           <Nav navIndex={navIndex} setNavIndex={setNavIndex}></Nav>
           <CardScroll navIndex={navIndex} setNavIndex={setNavIndex} duration={700} >
-            <Layout>
+            <Layout id={"about"}>
               <About/>
             </Layout>
-            <Layout>
+            <Layout id={"projects"}>
               <Projects/>
             </Layout>
-            <Layout>
+            <Layout id={"tech"}>
               <Tech/>
             </Layout>
-            <Layout>
+            <Layout id={"experience"}>
               <Experience/>
             </Layout>
-            <Layout>
+            <Layout id={"contact"}>
               <Contact/>
             </Layout>
           </CardScroll>

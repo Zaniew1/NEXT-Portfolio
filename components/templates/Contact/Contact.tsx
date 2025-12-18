@@ -45,7 +45,7 @@ export const Contact = () => {
     }
     return (
 
-        <div className={styles.contact} id={"contact"}>
+        <div className={styles.contact} >
             <SectionHeader>Kontakt</SectionHeader>
             <form className={styles.contact__form} onSubmit={sendText}>
                 <div className={styles.contact__form__line}>

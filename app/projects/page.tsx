@@ -58,12 +58,6 @@ import { SectionHeader } from "@/components/atoms/SectionHeader/SectionHeader";
                                       <Link className={styles.projects__swipeable__wrapper__link}  href={"/projects/"+el.id}>
                                           <span className={styles.projects__swipeable__wrapper__link__hover__bgc}></span>
                                         <div className={styles.projects__swipeable__wrapper__link__animations}>
-                                          <span className={styles.projects__swipeable__wrapper__link__hover__one}></span> 
-                                          <span className={styles.projects__swipeable__wrapper__link__hover__one__half}></span> 
-                                          <span className={styles.projects__swipeable__wrapper__link__hover__two}></span>
-                                          <span className={styles.projects__swipeable__wrapper__link__hover__three}></span>
-                                          <span className={styles.projects__swipeable__wrapper__link__hover__three__half}></span>
-                                          <span className={styles.projects__swipeable__wrapper__link__hover__four}></span>
                                           <span className={styles.projects__swipeable__wrapper__link__hover}>
                                             {el.title}
                                           </span>
@@ -96,12 +90,6 @@ import { SectionHeader } from "@/components/atoms/SectionHeader/SectionHeader";
                                       <Link className={styles.projects__swipeable__wrapper__link} href={"/projects/"+el.id}>
                                           <span className={styles.projects__swipeable__wrapper__link__hover__bgc}></span>
                                         <div className={styles.projects__swipeable__wrapper__link__animations}>
-                                          <span className={styles.projects__swipeable__wrapper__link__hover__one}></span> 
-                                          <span className={styles.projects__swipeable__wrapper__link__hover__one__half}></span> 
-                                          <span className={styles.projects__swipeable__wrapper__link__hover__two}></span>
-                                          <span className={styles.projects__swipeable__wrapper__link__hover__three}></span>
-                                          <span className={styles.projects__swipeable__wrapper__link__hover__three__half}></span>
-                                          <span className={styles.projects__swipeable__wrapper__link__hover__four}></span>
                                           <span className={styles.projects__swipeable__wrapper__link__hover}>
                                             {el.title}
                                           </span>
@@ -134,12 +122,6 @@ import { SectionHeader } from "@/components/atoms/SectionHeader/SectionHeader";
                                   <Link className={styles.projects__swipeable__wrapper__link}  href={"/projects/"+el.id}>
                                         <span className={styles.projects__swipeable__wrapper__link__hover__bgc}></span>
                                       <div className={styles.projects__swipeable__wrapper__link__animations}>
-                                        <span className={styles.projects__swipeable__wrapper__link__hover__one}></span> 
-                                        <span className={styles.projects__swipeable__wrapper__link__hover__one__half}></span> 
-                                        <span className={styles.projects__swipeable__wrapper__link__hover__two}></span>
-                                        <span className={styles.projects__swipeable__wrapper__link__hover__three}></span>
-                                        <span className={styles.projects__swipeable__wrapper__link__hover__three__half}></span>
-                                        <span className={styles.projects__swipeable__wrapper__link__hover__four}></span>
                                         <span className={styles.projects__swipeable__wrapper__link__hover}>
                                           {el.title}
                                         </span>

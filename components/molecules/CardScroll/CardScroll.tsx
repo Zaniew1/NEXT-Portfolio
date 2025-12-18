@@ -16,8 +16,8 @@ export default function CardScroll( { children,  duration = 800, navIndex, setNa
   const count = children.length;
   // handle nav change with navSmall and navRight
   useEffect(() => {
-    setIndex(navIndex);
-  }, [navIndex]);
+  setIndex(navIndex);
+}, [navIndex]);
   // handle page change on scroll
   useEffect(() => {
     if (window.innerWidth <= 768) return;
@@ -51,7 +51,10 @@ export default function CardScroll( { children,  duration = 800, navIndex, setNa
   };
 
   window.addEventListener("wheel", handleWheel, { passive: false });
-  window.addEventListener("touchmove", handleTouchMove, { passive: false });
+
+  if (window.innerWidth > 768) {
+    window.addEventListener("touchmove", handleTouchMove, { passive: false });
+  }
 
   return () => {
     window.removeEventListener("wheel", handleWheel);

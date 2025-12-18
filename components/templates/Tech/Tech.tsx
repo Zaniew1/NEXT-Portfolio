@@ -7,7 +7,7 @@ import { SectionHeader } from '@/components/atoms/SectionHeader/SectionHeader'
 export const Tech = () => {
     const [techIndex, setTechIndex]= useState<number>(0)
         return (
-        <div className={styles.tech} id={"tech"}>
+        <div className={styles.tech} >
             <SectionHeader>Technologie</SectionHeader>
             <div className={styles.tech__main}> 
                 <div className={styles.tech__main__nav}>

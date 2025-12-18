@@ -4,26 +4,19 @@ import styles from './NavMobile.module.css'
 import { Linkedin, Github } from 'lucide-react';
 import { usePathname, useRouter } from 'next/navigation';
 export const NavMobile = (props: MobileNavPropsType & NavIndexTypeOptional)=>{
-    const sectionToIndex: Record<string, number> = {
-        about: 0,
-        projects: 1,
-        tech: 2,
-        experience: 3,
-        contact: 4
-    }
     const pathname = usePathname();
     const router = useRouter();
     const navigateAndClose = (id: string) =>{
         props.setActive(false);
-        const targetIndex = sectionToIndex[id];
+
         if (pathname !== "/") {
-                router.push("/")
-                props.setNavIndex?.(targetIndex);
-            } else {
-                setTimeout(() => {
-                    props.setNavIndex?.(targetIndex);
-                }, 200);
-            }
+            router.push("/");
+            setTimeout(() => {
+                document.getElementById(id)?.scrollIntoView({ behavior: "smooth"});
+            }, 300);
+        } else {
+            document.getElementById(id)?.scrollIntoView({ behavior: "smooth",});
+        }
     }
     return (
         <div className={`${styles.navmobile} ${props.active ? styles.navmobile__active : ""}`}>

@@ -5,7 +5,7 @@ import { SectionHeader } from '@/components/atoms/SectionHeader/SectionHeader'
 export const Experience = () => {
         // someday here will be slider with experience cards
         return (
-        <div className={styles.experience} id={"experience"}>
+        <div className={styles.experience} >
             <SectionHeader>Doświadczenie</SectionHeader>
             <ExperienceCard data={experienceData[0]} />
         </div>

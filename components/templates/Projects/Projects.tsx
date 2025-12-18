@@ -27,7 +27,7 @@ export const Projects = () => {
         }, 700);
     };
     return (
-        <div className={styles.projects} id={"projects"}>
+        <div className={styles.projects} >
             <SectionHeader>Projekty</SectionHeader>
 
                 <SwipeableDiv onSwipeLeft={()=>changeProject(handleNext())} onSwipeRight={()=>changeProject(handlePrev())} >

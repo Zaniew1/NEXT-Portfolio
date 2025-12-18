@@ -31,7 +31,8 @@ function ProjectPage() {
           {github && <Link href={github}><FaGithub/>GitHub</Link>}
           {view && <Link href={view}><BsEye/>Podgląd</Link>}
         </div>
-        <ImageCarousel images={images}/>
+
+        {images && <ImageCarousel images={images}/>}
         <div className={styles.project__tech}>
           {technologies?.map((tech, index)=>{
             const colorStyle = tech.color      
