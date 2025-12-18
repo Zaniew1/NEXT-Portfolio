@@ -86,7 +86,6 @@ export const ImageCarousel = (props:CarouselType) =>{
             {props.images.length > 1 && 
             <Slider {...settings}>
                 {props.images.map((image, index)=>{
-                    console.log(props.images)
                     return(
                         <div key={index+1} className={styles.carousel__item}>
                             <ImageMagnify fill  src={`${image}`} alt={`Zdjęcie poglądowe projektu nr ${index+1}`} slideIndex={index+1} sources={[...props.images]}/>

@@ -25,7 +25,6 @@ export const experienceData: ExperienceDataType[] = [
                 tech:"Javascript",
                 icon:<SiJavascript/>,
                 color: "#F7DF1E"
-
             },
             {
                 tech:"PHP", 

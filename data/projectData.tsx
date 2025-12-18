@@ -35,40 +35,84 @@ export const projectData : ProjectDataType[] = [
                 color:{color: "#3178C6"}
             },
             {
+                icon: <SiNodedotjs/>,
+                name: "Node",
+                color:{color: "#339933"}
+            },
+            {
+                icon: <SiExpress/>,
+                name: "Express",
+                color:{color: "#555"}
+            },
+            {
                 icon: <SiReact />,
                 name: "React",
                 color:{color: "#61DAFB"}
             },
             {
-                icon: <SiNextdotjs/>,
-                name: "Next",
+                icon: <SiZod/>,
+                name: "Zod",
+                color:{color: "#6F2CAC"}
+            },
+            {
+                icon: <BsFiletypeDoc/>,
+                name: "jsDoc",
                 color:{color: "#555"}
             },
             {
-                icon: <SiCypress/>,
-                name: "Cypress",
-                color:{color: "#17202C"}
+                icon: <SiJest/>,
+                name: "Jest",
+                color:{color: "#C21325"}
             },
+            {
+                icon: <SiPrisma />,
+                name: "Prisma",
+                color:{color: "#0C4A6E"}
+            },
+            {
+                icon: <SiDocker/>,
+                name: "Docker",
+                color:{color: "#2496ED"}
+            },
+            {
+                icon: <SiJsonwebtokens />,
+                name: "JWT",
+                color: {background: "linear-gradient(135deg, #00FFFF, #00AFFF, #FF007F, #B200FF)"}
+            },
+           
         ],
         images:["/Bhp/1.png", "/Bhp/2.png", "/Bhp/3.png"],
         github: "https://github.com/Zaniew1/BHP",
-        view: "asd",
+        view: "",
         content:[
               {
-                header: "Description",
-                text: "umt, aut obcaecati!",
+                header: "Opis - w trakcie rozwoju",
+                text: "Aplikacja ta powstaje z inicjatywy mojego brata, który pracuje jako BHP-owiec w dużej firmie produkcyjnej. Potrzebował on systemu do zarządzania firmami, działami i pracownikami.",
+            },
+             {
+                header: "Funkcje",
+                list: ["system autoryzacji i autentykacji",
+                        "zarządzanie firmami",
+                        "zarządzanie działami",
+                        "zarządzanie pracownikami",
+                        "przypominanie o zaległych szkoleniach bhp pracowników (maile)",
+                        "przypominanie o zaległych badaniach lekarskich (maile)",
+                        "drukowanie skierowania na badania lekarskie",
+                        "weryfikacja NIP-u w krajowym rejestrze",
+                        "przechowywanie dokumentów firm, działów i pracowników",
+                        "import/export dokumentów excel",
+                        "wykonywanie ocen ryzyka miejsca pracy",
+                        "wykonywanie kontrol miejsca pracy",
+                        "zgłaszanie wypadków pracowników",
+                ]
             },
               {
-                header: "Features",
-                text: "atis consequunore itaque est, aut obcaecati!",
-            },
-            {
-                header: "Tech",
-                list: ["NODE_ENV: dev | prod", "NODE_ENV2: dev | prod" ],
+                header: "Uruchomienie - Docker ",
+                list: ['git clone ', 'cd BHP', 'docker-compose up --build'],
             },
             {
                 header: "Environment variables",
-                text: "Lorem ilorti!",
+                list: [''],
             }
         ]
     },
@@ -78,7 +122,7 @@ export const projectData : ProjectDataType[] = [
         type:"Front-end",
          technologies: [
             {
-                icon: <SiExpress/>,
+                icon: <SiTypescript/>,
                 name: "Typescript",
                 color:{color: "#3178C6"}
             },
@@ -93,30 +137,50 @@ export const projectData : ProjectDataType[] = [
                 color:{color: "#555"}
             },
             {
-                icon: <SiCypress/>,
-                name: "Cypress",
-                color:{color: "#17202C"}
-            },
+                icon: <TbBrandFramerMotion/>,
+                name:"Framer Motion",
+                color: {background: "linear-gradient(135deg, #ff3cac 0%, #784ba0 50%, #2b86c5 100%)"}
+            }
         ],
         images:["/Portfolio/1.png", "/Portfolio/2.png"],
         github: "https://github.com/Zaniew1/NEXT-Portfolio",
         view: "https://www.mzaniewski.pl",
         content:[
-              {
-                header: "Description",
+            {
+                header: "Opis",
                 text: "Projekt ten jest moim portfolio. Chciałem w nim pokazać kim jestem, czym się interesuję, w jakich technologiach pracuje i jak wygląda moje doświadczenie komercyjne.",
             },
-              {
-                header: "Features",
-                text: "atis consequunore itaque est, aut obcaecati!",
+            {
+                header: "Uruchomienie - Docker",
+                list: [
+                    "git clone https://github.com/Zaniew1/NEXT-Portfolio.git", 
+                    "cd NEXT-Portfolio",
+                    "docker-compose up --build", 
+                    "open http://localhost:3000 in your browser"
+                ],
             },
             {
-                header: "Tech",
-                list: ["NODE_ENV: dev | prod", "NODE_ENV2: dev | prod" ],
+                header: "Uruchomienie - npm",
+                list: [
+                    "git clone https://github.com/Zaniew1/NEXT-Portfolio.git", 
+                    "cd NEXT-Portfolio",
+                    "npm i",
+                    "npm run dev",
+                    "open http://localhost:3000 in your browser"
+                ],
             },
             {
-                header: "Environment variables",
-                text: "Lorem ilorti!",
+                header: "Funkcje",
+                list: [
+                    "Efekt scrollowania", 
+                    "Sekcje portfolio (projekty)", 
+                    "O mnie / bio",
+                    "Technologie i stack technologiczny",
+                    "Doświadczenie zawodowe",
+                    "Możliwość pobrania CV",
+                    "Formularz kontaktowy",
+                    "Nawigacja po sekcjach (O mnie, Projekty, Technologie, Doświadczenie, Kontakt)"
+                ],
             }
         ]
     },
@@ -140,15 +204,34 @@ export const projectData : ProjectDataType[] = [
                 name: "Next",
                 color:{color: "#555"}
             },
-            {
-                icon: <SiCypress/>,
-                name: "Cypress",
-                color:{color: "#17202C"}
-            },
         ],
         images:["/Photography/1.png","/Photography/2.png","/Photography/3.png","/Photography/4.png","/Photography/5.png","/Photography/6.png"],
         github: "https://github.com/Zaniew1/NEXT-PhotographySite",
-        view: ""
+        view: "https://react-photography-site-qbn6kf07z-zaniew1.vercel.app/",
+        content:[
+            {
+                header: "Opis",
+                text: "W tym projekcie stworzyłem nowoczesne portfolio fotograficzne w Next, dla fotografa ślubnego. Chciałem, żeby strona była prosta w nawigacji, a jednocześnie efektowna wizualnie, więc postawiłem na single-page layout z płynnym przewijaniem do poszczególnych sekcji.",
+            },
+            {
+                header: "Uruchomienie",
+                list: [
+                    "git clone https://github.com/Zaniew1/NEXT-PhotographySite.git", 
+                    "cd NEXT-PhotographySite",
+                    "npm i",
+                    "npm run dev",
+                ],
+            },
+            {
+                header: "Funkcje",
+                list: [
+                   "Galerie zdjęć w formie sliderów - każda sesja ślubna ma swoją prezentację zdjęć, którą użytkownik może przewijać. Użyłem tutaj Reactowego komponentu galerii, który pozwala też na powiększanie zdjęć po kliknięciu, co daje efekt pełnego podglądu.",
+                    "Menu nawigacyjne - zrobiłem je jako sticky menu, które pozwala przejść do sekcji „Oferta”, „O mnie”, „Opinie” i „Kontakt” jednym kliknięciem, wykorzystując anchor links i płynne przewijanie.",
+                    "Sekcje informacyjne - każda sekcja jest responsywna, zoptymalizowana pod mobilne urządzenia i desktop. Zadbałem o to, żeby tekst i zdjęcia dobrze się skalowały i były czytelne.",
+                    "Responsywność i UX - cała strona działa płynnie na desktopie i na urządzeniach mobilnych, slider działa też na gesty swipe, a zdjęcia ładują się w miarę przewijania (lazy loading), żeby strona była szybka."
+                ],
+            }
+        ]
     },
     {
         id: 3,
@@ -247,22 +330,21 @@ export const projectData : ProjectDataType[] = [
                 name: "Next",
                 color:{color: "#555"}
             },
-            {
-                icon: <SiCypress/>,
-                name: "Cypress",
-                color:{color: "#17202C"}
-            },
         ],
         images:["/Blog/1.png", "/Blog/2.png"],
         github: "https://github.com/Zaniew1/MERN-Blog",
         content:[
               {
                 header: "Opis",
-                text: "",
+                text: "Aplikacja ta jest blogiem, który może prowadzić więcej niż jedna osoba. Rejestracja użytkownika umożliwia mu dodawanie postów. Pod postem wyświetlać się będzie miniatura danego użytkownika oznaczając że to on wykonał dany post.",
             },
-              {
+            {
                 header: "Quick start",
-                list: ["git clone https://github.com/Zaniew1/PomodoroApp.git", "cd PomodoroApp", "npm i ", "npm run dev" ],
+                list: ["git clone https://github.com/Zaniew1/MERN-Blog.git", "cd MERN-Blog", "docker-compose up --build"],
+            },
+            {
+                header: "Funkcjonalności",
+                list: ["autoryzacja i autentykacja użytkownika", "dodawanie postów", "dodawanie zdjęć użytkownika", "edycja i usuwanie postów", "wysyłanie newsletterów"],
             },
         ]
     },

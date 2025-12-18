@@ -1,3 +1,4 @@
+"use client";
 import { CSSProperties, useState } from "react";
 import FsLightbox from "fslightbox-react";
 import { SearchCheck } from 'lucide-react';
