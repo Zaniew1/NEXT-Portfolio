@@ -1,0 +1,26 @@
+{
+       "menu": {
+        "home": "Home",
+        "about": "About",
+        "projects": "Projects",
+        "tech": "Technologies",
+        "exp": "Experience",
+        "contact": "Contact",
+        "allProjects": "All Projects",
+        "cv": "Download CV"
+    },
+    "home": {
+        "one": "Who am I",
+        "one_text_one":"Hello! I'm a fullstack developer with a 3-year internship, and recently I've been intensively working on a SaaS product in the advertising industry (distribution and display). You could say I'm really good at creating scalable and truly efficient web applications. Now I'm looking for a place where I can jump into deep water and fully develop my wings in MERN technologies (MongoDB, Express, React, Node.js).",
+        "one_text_two": "Goal? Working on innovative projects that really make sense and where I can contribute to creating something cool and effective. I'm ready for new challenges! I'd be happy to join a team that values good work and gives space for growth.",
+        "two": "Hobbys",
+        "two_text": {
+            "header_one": "Chess",
+            "header_one_text":"I love strategic thinking and predicting several moves ahead in chess. My favorite opening is the King's Indian Defense.",
+            "header_two": "Mountain Hiking",
+            "header_two_text": "My favorite place on Earth are the Tatra Mountains. Every summer and winter break, I try to go there for at least one day to reset in the mountains. I've already climbed 80% of the highest peaks in the Tatras. I plan to climb them all soon (Gotta catch 'em all :D)",
+            "header_three": "Cinematography",
+            "header_three_text": "I'm also interested in cinematography — both from an artistic layer and narrative perspective. I'm inspired by how creators build emotions, rhythm, and atmosphere. My favorite director is Christopher Nolan."
+        }
+    }
+}

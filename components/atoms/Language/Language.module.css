@@ -1,0 +1,7 @@
+.lang{
+    width: 1.5em;
+    height: 1em;
+    margin-right: 1em;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}

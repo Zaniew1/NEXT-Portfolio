@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Lexend, Roboto } from "next/font/google";
 import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { LangProviders } from "@/components/atoms/LangProviders/LangProviders";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -44,7 +45,7 @@ export default function RootLayout({
       <body
         className={`${roboto.variable} ${lexend.variable} antialiased`}
       >
-        {children}
+        <LangProviders>{children}</LangProviders>
         <SpeedInsights/>
       </body>
     </html>
