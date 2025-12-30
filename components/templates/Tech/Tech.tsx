@@ -4,11 +4,14 @@ import styles from './Tech.module.css'
 import { techData } from '@/data/techData'
 import {  motion } from "motion/react"
 import { SectionHeader } from '@/components/atoms/SectionHeader/SectionHeader'
+import { useTranslation } from 'react-i18next'
 export const Tech = () => {
-    const [techIndex, setTechIndex]= useState<number>(0)
+    const [techIndex, setTechIndex]= useState<number>(0);
+        const [t] = useTranslation("global");
+    
         return (
         <div className={styles.tech} >
-            <SectionHeader>Technologie</SectionHeader>
+            <SectionHeader>{t("menu.tech")}</SectionHeader>
             <div className={styles.tech__main}> 
                 <div className={styles.tech__main__nav}>
                    {techData.map((el, index)=>{
@@ -17,7 +20,7 @@ export const Tech = () => {
                                  key={`${el.section}-${el.id}`} 
                                  className={`${styles.tech__main__nav__element} ${index === techIndex ? styles.tech__main__nav__element__active : "" }`}>
                                     <span className={styles.tech__main__nav__element__span}></span>
-                                    {el.section}
+                                    {t(el.section)}
                             </div>
                         )
                    })}

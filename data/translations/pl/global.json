@@ -10,18 +10,70 @@
         "cv": "Pobierz CV"
     },
     "home": {
-        "one": "Kim jestem",
-        "one_text_one":"Cześć! Jestem fullstack developerem z 3-letnim stażem, a ostatnio intensywnie pracowałem nad produktem SaaS z branży reklamy (dystrybucja i wyświetlanie). Można powiedzieć, że świetnie ogarniam, jak tworzyć skalowalne i naprawdę wydajne aplikacje webowe. Teraz szukam miejsca, gdzie mógłbym skoczyć na głęboką wodę i w pełni rozwinąć skrzydła w technologiach MERN (MongoDB, Express, React, Node.js).",
-        "one_text_two": " Cel? Działać przy innowacyjnych projektach, które rzeczywiście mają sens i gdzie mogę się przyczynić do stworzenia czegoś fajnego i efektywnego. Jestem gotów na nowe wyzwania! Chętnie dołączę do zespołu, który ceni sobie dobrą robotę i daje przestrzeń na rozwój.",
-        "two":"Zainteresowania",
-        "two_text": {
-            "header_one": "Szachy",
-            "header_one_text":"W szachach uwielbiam strategiczne myślenia i przewidywanie kilka ruchów w przód. Moim ulubionym otwarciem jest Obrona królewsko-indyjska.",
-            "header_two": "Wędrówki po górach",
-            "header_two_text": "Moim ulubionym miejscem na ziemi są Tatry, w każde wakacje i ferie zimowe staram się pojechać choćby na 1 dzień by móc sie zresetować w górach. Zdobyłem już 80% najwyższych szczytów Tatr. Zamierzam niedługo zdobyć je wszystkie (Gotta catch 'em all :D)",
-            "header_three": "Kinematografia",
-            "header_three_text": "Interesuję się również kinematografią — zarówno od strony warstwy artystycznej, jak i narracji. Inspiruje mnie sposób, w jaki twórcy budują emocje, rytm i atmosferę. Moim ulubionym reżyserem jest Christopher Nolan."
+        "one":{
+            "header": "Kim jestem",
+            "text_one": "Cześć! Jestem fullstack developerem z 3-letnim stażem, a ostatnio intensywnie pracowałem nad produktem SaaS z branży reklamy (dystrybucja i wyświetlanie). Można powiedzieć, że świetnie ogarniam, jak tworzyć skalowalne i naprawdę wydajne aplikacje webowe. Teraz szukam miejsca, gdzie mógłbym skoczyć na głęboką wodę i w pełni rozwinąć skrzydła w technologiach MERN (MongoDB, Express, React, Node.js).",
+            "text_two" : " Cel? Działać przy innowacyjnych projektach, które rzeczywiście mają sens i gdzie mogę się przyczynić do stworzenia czegoś fajnego i efektywnego. Jestem gotów na nowe wyzwania! Chętnie dołączę do zespołu, który ceni sobie dobrą robotę i daje przestrzeń na rozwój.",
+            "milestones_one": "lata doświadczenia komercyjnego",
+            "milestones_two": "commitów na github",
+            "milestones_three": "chęci do rozwoju"
+        } ,
+        "two":{
+            "header": "Zainteresowania",
+            "text":{
+                "header_one": "Szachy",
+                "header_one_text":"W szachach uwielbiam strategiczne myślenia i przewidywanie kilka ruchów w przód. Moim ulubionym otwarciem jest Obrona królewsko-indyjska.",
+                "header_two": "Wędrówki po górach",
+                "header_two_text": "Moim ulubionym miejscem na ziemi są Tatry, w każde wakacje i ferie zimowe staram się pojechać choćby na 1 dzień by móc sie zresetować w górach. Zdobyłem już 80% najwyższych szczytów Tatr. Zamierzam niedługo zdobyć je wszystkie (Gotta catch 'em all :D)",
+                "header_three": "Kinematografia",
+                "header_three_text": "Interesuję się również kinematografią — zarówno od strony warstwy artystycznej, jak i narracji. Inspiruje mnie sposób, w jaki twórcy budują emocje, rytm i atmosferę. Moim ulubionym reżyserem jest Christopher Nolan."
+            }
         }
+    },
+    "projects":{
+        "home": {
+            "details": "Wyświetl szczegóły",
+            "all": "Zobacz wszystkie projekty",
+            "prev": "Poprzedni projekt",
+            "next": "Nastepny projekt"
+        },
+        "projects":{
+            "all_projects": "Wszystkie moje projekty",
+            "preview": "Podgląd",
+            "1":{},
+            "2":{},
+            "3":{},
+            "4":{},
+            "5":{},
+            "6":{}
+        }
+    },
+    "tech":{
+        "frontend": "FrontEnd",
+        "backend": "BackEnd",
+        "database": "Bazy danych",
+        "tests": "Testowanie",
+        "tools": "Narzędzia",
+        "rest": "Pozostałe"
+    },
+    "exp": {
+        "one": {
+            "name": "Onnetwork.tv",
+            "date": "05.2022 - obecnie",
+            "description":{
+                "header": "Opis stanowiska:",
+                "0": "Tworzenie oraz utrzymanie aplikacji webowych wykorzystywanych w firmie",
+                "1": "Integracja aplikacji z zewnętrznymi API",
+                "2": "Tworzenie i optymalizacja zapytań do bazy danych MySql",
+                "3": "Współpraca z zespołem projektowym w metodyce Agile",
+                "4": "Udział w planowaniu oraz estymacji zadań"
+            }
+        }
+    },
+    "contact": {
+        "name": "Imię",
+        "message": "Wiadomość",
+        "send": "Wyślij wiadomość"
     }
 
 }

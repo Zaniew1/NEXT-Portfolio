@@ -5,6 +5,7 @@ import { projectData } from "@/data/projectData";
 import { AnimatedText } from "@/components/atoms/AnimatedLetters/AnimatedLetters";
 import { ProjectNavImage } from "@/components/molecules/ProjectNavImage/ProjectNavImage";
 import { Arrow } from "@/components/atoms/Arrow/Arrow";
+import { useTranslation } from "react-i18next";
 
 type ProjectNavType = {
     index: number,
@@ -16,7 +17,7 @@ type ProjectNavType = {
 }
 
 export const ProjectNav = (props: ProjectNavType) =>{
-
+    const [t] = useTranslation("global");
     const getIndex = (newIndex:number) => {
         const max = projectData.length;
         return (newIndex + max) % max; // cykliczny wrap-around
@@ -33,18 +34,18 @@ export const ProjectNav = (props: ProjectNavType) =>{
     return(
         <div className={styles.projectNav}>
 
-           <ProjectNavImage position={"left"} previousProject={previousProject} text={"Poprzedni projekt"} isAnimating={props.isAnimating} changeProject={()=>props.changeProjectPrev()} />
+           <ProjectNavImage position={"left"} previousProject={previousProject} text={t("projects.home.prev")} isAnimating={props.isAnimating} changeProject={()=>props.changeProjectPrev()} />
             <div className={styles.projectNav__middle}>
                 <Arrow onClick={()=>props.changeProjectPrev()} orientation="left"></Arrow>
                 <Link href={'/projects'}>
                     <p className={styles.projectNav__text} >
-                        <AnimatedText text="Zobacz wszystkie projekty" />
+                        <AnimatedText text={t("projects.home.all")} />
                         <span className={styles.projectNav__text__span}></span>
                     </p>
                 </Link>
                 <Arrow onClick={() => props.changeProjectNext()} orientation="right" ></Arrow>
             </div>
-           <ProjectNavImage position={"right"} previousProject={nextProject} text={"Następny projekt"} isAnimating={props.isAnimating} changeProject={()=>props.changeProjectNext()} />
+           <ProjectNavImage position={"right"} previousProject={nextProject} text={t("projects.home.next")} isAnimating={props.isAnimating} changeProject={()=>props.changeProjectNext()} />
             
         </div>
     ); 

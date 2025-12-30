@@ -1,12 +1,9 @@
-import { SiTypescript,SiJavascript,SiNextdotjs,SiReact,SiCss3,SiHtml5,SiPostman,SiZod,
-        SiFfmpeg,SiJsonwebtokens,SiPhp, SiNodedotjs, SiExpress, SiMongodb, SiMysql,SiJest,
-        SiCypress,SiDocker,SiJira,SiPrisma,SiMongoose} from "react-icons/si";
+import { SiTypescript,SiJavascript,SiNextdotjs,SiReact,SiCss3,SiHtml5,SiZod,
+        SiJsonwebtokens, SiNodedotjs, SiExpress, SiMongodb, SiJest,
+        SiCypress,SiDocker,SiPrisma,SiMongoose} from "react-icons/si";
 import {       } from "react-icons/si";
 import { DiRedis, } from "react-icons/di";
-import { LiaGit } from "react-icons/lia";
-import { VscVscode } from "react-icons/vsc";
 import { BsFiletypeDoc } from "react-icons/bs";
-import { LuTestTubeDiagonal } from "react-icons/lu";
 import { TbBrandFramerMotion } from "react-icons/tb";
 import { TechDataTechnologiesType } from "./techData";
 

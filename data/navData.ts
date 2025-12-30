@@ -1,17 +1,17 @@
 export const navData = [
     {
-        title: "O mnie"
+        title: "menu.about"
     },
     {
-        title: "Projekty"
+        title: "menu.projects"
     },
     {
-        title: "Technologie"
+        title: "menu.tech"
     },
     {
-        title: "Doświadczenie"
+        title: "menu.exp"
     },
     {
-        title: "Kontakt"
+        title: "menu.contact"
     }
 ] 

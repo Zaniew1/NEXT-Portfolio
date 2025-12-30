@@ -3,8 +3,11 @@ import { ChevronUp, ChevronDown } from 'lucide-react';
 import styles from "./NavSmall.module.css"
 import {navData} from '../../../data/navData'
 import { NavIndexType } from '@/app/page';
+import { useTranslation } from 'react-i18next';
 
 export const NavSmall = (props:NavIndexType) => {
+    const [t] = useTranslation("global");
+    
     const incrementPageNumber = (number:number)=>{
         if(number >= navData.length-1)return;
         props.setNavIndex(number+1)
@@ -17,7 +20,7 @@ export const NavSmall = (props:NavIndexType) => {
         <div className={styles.navsmall}>
             <div className={styles.navsmall__info}>
                 <div className={styles.navsmall__info__number}>0{props.navIndex+1}</div>
-                <div className={styles.navsmall__info__title}>{navData[props.navIndex].title}</div>
+                <div className={styles.navsmall__info__title}>{t(navData[props.navIndex].title)}</div>
             </div>
             <div className={styles.navsmall__arrows}>
                 <div onClick={()=>decrementPageNumber(props.navIndex)} className={`${styles.navsmall__arrow} ${props.navIndex == 0 ? `${styles.navsmall__arrow__deactivated}` :""}`}><ChevronUp/></div>

@@ -10,10 +10,11 @@ import Link from 'next/link';
 import { AnimatePresence, motion } from 'motion/react';
 import { SwipeableDiv } from '@/components/molecules/SwipeableDiv/SwipeableDiv';
 import { SectionHeader } from '@/components/atoms/SectionHeader/SectionHeader';
+import { useTranslation } from 'react-i18next';
 export const Projects = () => {
     const [projectIndex, setProjectIndex] = useState<number>(0);
-  const [isAnimating, setAnimating] = useState<number>(0);
-   
+    const [isAnimating, setAnimating] = useState<number>(0);
+    const [t] = useTranslation("global");
     const getIndex = (newIndex:number) => {
         const max = projectData.length;
         return (newIndex + max) % max; // cykliczny wrap-around
@@ -28,7 +29,7 @@ export const Projects = () => {
     };
     return (
         <div className={styles.projects} >
-            <SectionHeader>Projekty</SectionHeader>
+            <SectionHeader>{t("menu.projects")}</SectionHeader>
 
                 <SwipeableDiv onSwipeLeft={()=>changeProject(handleNext())} onSwipeRight={()=>changeProject(handlePrev())} >
             <div className={styles.projects__main}>
