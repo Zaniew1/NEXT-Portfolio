@@ -1,0 +1,79 @@
+{
+    "menu": {
+        "home": "Home",
+        "about": "About me",
+        "projects": "Projects",
+        "tech": "Technologies",
+        "exp": "Experience",
+        "contact": "Contact",
+        "allProjects": "All projects",
+        "cv": "Download CV"
+    },
+    "home": {
+        "one": {
+            "header": "Who I am",
+            "text_one": "Hi! I am a fullstack developer with 3 years of commercial experience. Recently, I have been working intensively on a SaaS product in the advertising industry (distribution and display). You could say I have a solid understanding of how to build scalable and truly efficient web applications. I am now looking for a place where I can dive into deep waters and fully spread my wings in MERN technologies (MongoDB, Express, React, Node.js).",
+            "text_two": "Goal? To work on innovative projects that truly make sense and where I can contribute to creating something cool and effective. I am ready for new challenges! I would be happy to join a team that values quality work and provides space for growth.",
+            "milestones_one": "years of commercial experience",
+            "milestones_two": "commits on GitHub",
+            "milestones_three": "drive to grow"
+        },
+        "two": {
+            "header": "Interests",
+            "text": {
+                "header_one": "Chess",
+                "header_one_text": "In chess, I love strategic thinking and predicting several moves ahead. My favorite opening is the King's Indian Defense.",
+                "header_two": "Mountain hiking",
+                "header_two_text": "My favorite place on Earth is the Tatra Mountains. Every summer and winter break, I try to go there even for a single day to reset in the mountains. I have already climbed 80% of the highest Tatra peaks and plan to conquer them all soon (Gotta catch 'em all :D).",
+                "header_three": "Cinematography",
+                "header_three_text": "I am also interested in cinematography — both from the artistic and narrative perspectives. I am inspired by how creators build emotions, rhythm, and atmosphere. My favorite director is Christopher Nolan."
+            }
+        }
+    },
+    "projects": {
+        "home": {
+            "details": "View details",
+            "all": "See all projects",
+            "prev": "Previous project",
+            "next": "Next project"
+            
+        },
+        "projects": {
+            "all_projects": "All my projects",
+            "preview": "Preview",
+            "1": {},
+            "2": {},
+            "3": {},
+            "4": {},
+            "5": {},
+            "6": {}
+        }
+    },
+    "tech": {
+        "frontend": "FrontEnd",
+        "backend": "BackEnd",
+        "database": "Databases",
+        "tests": "Testing",
+        "tools": "Tools",
+        "rest": "Other"
+    },
+    "exp": {
+        "one": {
+            "name": "Onnetwork.tv",
+            "date": "05.2022 - present",
+            "description": {
+                "header": "Position description:",
+                "0": "Development and maintenance of web applications used within the company",
+                "1": "Integration of applications with external APIs",
+                "2": "Creating and optimizing MySQL database queries",
+                "3": "Collaboration with the project team using Agile methodology",
+                "4": "Participation in task planning and estimation"
+            }
+        }
+    },
+    "contact": {
+        "name": "Name",
+        "message": "Message",
+        "send": "Send message"
+    }
+}

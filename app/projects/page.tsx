@@ -11,7 +11,9 @@ import { projectData } from "@/data/projectData";
 import { ImageContainer } from "@/components/atoms/ImageContainer/ImageContainer";
 import Link from "next/link";
 import { SectionHeader } from "@/components/atoms/SectionHeader/SectionHeader";
+import { useTranslation } from "react-i18next";
  function ProjectsPage () {
+      const [t] = useTranslation("global");
       const [switchText, setSwitchText]  = useState<number>(0);
       const swipeLeft = () => {
           if(switchText == 0){setSwitchText(2)}
@@ -32,7 +34,7 @@ import { SectionHeader } from "@/components/atoms/SectionHeader/SectionHeader";
         <Nav></Nav>
          <Layout>
             <div className={styles.projects}>
-              <SectionHeader>Wszystkie moje projekty</SectionHeader>
+              <SectionHeader>{t("projects.projects.all_projects")}</SectionHeader>
               <div className={styles.projects__text__switch}>
                 <p onClick={()=>setSwitchText(0)} className={`${styles.projects__text__switch__item} ${switchText == 0 ? `${styles.projects__text__switch__item__active}`: ""}`}>Frontend</p>
                 <p onClick={()=>setSwitchText(1)} className={`${styles.projects__text__switch__item} ${switchText == 1 ? `${styles.projects__text__switch__item__active}`: ""}`}>Backend</p>

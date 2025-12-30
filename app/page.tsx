@@ -12,6 +12,7 @@ import { Projects } from "@/components/templates/Projects/Projects";
 import { Experience } from "@/components/templates/Experience/Experience";
 import CardScroll from "@/components/molecules/CardScroll/CardScroll";
 import { useState } from "react";
+
 export type NavIndexType = {
     navIndex: number,
     setNavIndex: (index: number)=> void
@@ -19,8 +20,8 @@ export type NavIndexType = {
 
 export default function Home() {
   const [navIndex, setNavIndex] = useState<number>(0);
-  return (
 
+  return (
       <main className="main">
           <Nav navIndex={navIndex} setNavIndex={setNavIndex}></Nav>
           <CardScroll navIndex={navIndex} setNavIndex={setNavIndex} duration={700} >

@@ -2,8 +2,10 @@
 import { useState } from 'react'
 import styles from './Contact.module.css'
 import { SectionHeader } from '@/components/atoms/SectionHeader/SectionHeader';
+import { useTranslation } from 'react-i18next';
 
 export const Contact = () => {
+    const [t] = useTranslation("global");
     const [validName , setValidName] = useState<boolean>(false);
     const [validEmail , setValidEmail] = useState<boolean>(false);
     const [validText , setValidText] = useState<boolean>(false);
@@ -46,10 +48,10 @@ export const Contact = () => {
     return (
 
         <div className={styles.contact} >
-            <SectionHeader>Kontakt</SectionHeader>
+            <SectionHeader>{t("menu.contact")}</SectionHeader>
             <form className={styles.contact__form} onSubmit={sendText}>
                 <div className={styles.contact__form__line}>
-                    <label htmlFor='form__name' className={styles.contact__form__line__label}>Imię</label>
+                    <label htmlFor='form__name' className={styles.contact__form__line__label}>{t("contact.name")}</label>
                     <input onBlur={(e)=>isValidName(e)} id={"form__name"} className={styles.contact__form__line__input} type="text" required/>
                     <span className={`${styles.contact__form__line__span__gold} ${validName ? styles.contact__form__line__span__gold__active: ""}`}></span>
                     <span className={styles.contact__form__line__span}></span>
@@ -63,14 +65,14 @@ export const Contact = () => {
                     <span className={`${invalidEmail !== "" ? styles.contact__form__line__error : styles.contact__form__line__error__inactive }`}>{invalidEmail}</span>
                 </div>
                 <div className={styles.contact__form__line}>
-                    <label htmlFor='form__text' className={styles.contact__form__line__label}>Wiadomość</label>
+                    <label htmlFor='form__text' className={styles.contact__form__line__label}>{t("contact.message")}</label>
                     <textarea onBlur={(e)=>isValidText(e)} id={"form__text"}  className={styles.contact__form__line__textarea} required></textarea>
                     <span className={`${styles.contact__form__line__span__gold} ${validText ? styles.contact__form__line__span__gold__active: ""}`}></span>
                     <span className={styles.contact__form__line__span}></span>
                     <span className={`${invalidText !== "" ? styles.contact__form__line__error : styles.contact__form__line__error__inactive }`}>{invalidText}</span>
                 </div>
                 <div className={styles.contact__form__submit}>
-                    <input className={`${styles.contact__form__submit__input } ${validEmail &&  validName && validText ? styles.contact__form__submit__input__active : styles.contact__form__submit__input__inactive}`} type="submit" value="Wyślij Wiadomość"/>
+                    <input className={`${styles.contact__form__submit__input } ${validEmail &&  validName && validText ? styles.contact__form__submit__input__active : styles.contact__form__submit__input__inactive}`} type="submit" value={t("contact.send")}/>
                 </div>
             </ form>
         </div>

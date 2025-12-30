@@ -11,15 +11,14 @@ export type ExperienceDataType = {
         technologies: {tech: string, icon: React.ReactNode,  color:string}[],
         responsibilities: {key: number, text: string,}[]
 }
-
 export const experienceData: ExperienceDataType[] = [
     {
         id: 0,
         position: "Fullstack Developer",
-        company: "Onnetwork.tv",
+        company: "exp.one.name",
         companyLogo: '/onn.jpg',
         companyWebsite: 'https://www.onnetwork.tv',
-        duration: "05.2022 - obecnie",
+        duration: "exp.one.date",
         technologies: [
             {
                 tech:"Javascript",
@@ -53,11 +52,11 @@ export const experienceData: ExperienceDataType[] = [
             }
         ],
         responsibilities: [
-            { key: 0, text:"Tworzenie oraz utrzymanie aplikacji webowych wykorzystywanych w firmie"},
-            { key: 1, text:"Integracja aplikacji z zewnętrznymi API"},
-            { key: 2, text:"Tworzenie i optymalizacja zapytań do bazy danych MySql"},
-            { key: 3, text:"Współpraca z zespołem projektowym w metodyce Agile"},
-            { key: 4, text:"Udział w planowaniu oraz estymacji zadań"}
+            { key: 0, text:"exp.one.description.0"},
+            { key: 1, text:"exp.one.description.1"},
+            { key: 2, text:"exp.one.description.2"},
+            { key: 3, text:"exp.one.description.3"},
+            { key: 4, text:"exp.one.description.4"}
 
         ]
     }

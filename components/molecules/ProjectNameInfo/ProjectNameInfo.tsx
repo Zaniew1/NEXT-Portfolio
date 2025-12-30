@@ -2,10 +2,13 @@ import Link from "next/link"
 import styles from "./ProjectNameInfo.module.css"
 import { projectData } from "@/data/projectData"
 import { motion } from "motion/react"
+import { useTranslation } from "react-i18next"
 
 
 export const ProjectNameInfo = (props: {index : number, setIndex: (index: number)=> void, isAnimating: number}) =>{
     const project = projectData.find(el => el.id === props.index);
+    const [t] = useTranslation("global");
+    
     if (!project) return null;
     return (<motion.div key={props.isAnimating}  
                     animate={{ opacity: [1, 0, 1] }} 
@@ -21,7 +24,7 @@ export const ProjectNameInfo = (props: {index : number, setIndex: (index: number
                     <div className={styles.projectname__wrapper__info__name}>{project.title}</div>
                 </div>
                 <div className={styles.projectname__wrapper__link}>
-                    <Link className={styles.projectname__wrapper__link__anchor} href={"projects/"+project.id} >Wyświetl szczegóły</Link>
+                    <Link className={styles.projectname__wrapper__link__anchor} href={"projects/"+project.id} >{t("projects.home.details")}</Link>
                     <span  className={styles.projectname__wrapper__link__span}></span>
                 </div>
 

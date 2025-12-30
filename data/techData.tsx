@@ -23,7 +23,7 @@ type TechDataType = {
 export const techData: TechDataType = [
     {
         id: 0,
-        section: "FrontEnd",
+        section: "tech.frontend",
         technologies:[
             {
                 icon: <SiJavascript/>,
@@ -59,7 +59,7 @@ export const techData: TechDataType = [
     },
     {
         id: 1,
-        section: "BackEnd",
+        section: "tech.backend",
         technologies:[
             {
                 icon: <SiPhp/>,
@@ -80,7 +80,7 @@ export const techData: TechDataType = [
     },
         {
         id: 2,
-        section: "Bazy Danych",
+        section: "tech.database",
         technologies:[
             {
                 icon: <SiMysql/>,
@@ -112,7 +112,7 @@ export const techData: TechDataType = [
     },
         {
         id: 3,
-        section: "Testowanie",
+        section: "tech.tests",
         technologies:[
             {
                 icon: <SiJest/>,
@@ -134,7 +134,7 @@ export const techData: TechDataType = [
     },
         {
         id: 4,
-        section: "Narzędzia",
+        section: "tech.tools",
         technologies:[
             {
                 icon: <LiaGit/>,
@@ -170,7 +170,7 @@ export const techData: TechDataType = [
     },
     {
         id: 5,
-        section: "Pozostałe",
+        section: "tech.rest",
         technologies:[
             {
                 icon: <SiZod/>,

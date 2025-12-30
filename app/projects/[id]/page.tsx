@@ -11,8 +11,10 @@ import { FaGithub } from "react-icons/fa";
 import { BsEye } from "react-icons/bs";
 import { ImageContainer } from "@/components/atoms/ImageContainer/ImageContainer";
 import { SectionHeader } from "@/components/atoms/SectionHeader/SectionHeader";
+import { useTranslation } from "react-i18next";
 // import { ImageMagnify } from "@/components/atoms/ImageMagnify/ImageMagnify";
 function ProjectPage() {
+  const [t] = useTranslation("global");
   const queryParams = useParams();
   const projectId = queryParams.id
   const project = projectData.find(el => Number(el.id) === Number(projectId));
@@ -29,7 +31,7 @@ function ProjectPage() {
           
         <div className={styles.project__links}>
           {github && <Link href={github}><FaGithub/>GitHub</Link>}
-          {view && <Link href={view}><BsEye/>Podgląd</Link>}
+          {view && <Link href={view}><BsEye/>{t("projects.projects.preview")}</Link>}
         </div>
 
         {images && <ImageCarousel images={images}/>}
@@ -48,13 +50,13 @@ function ProjectPage() {
           {content?.map((el, index)=>{
             return (
               <div className={styles.project__content__wrapper} key={`key:content__item__${index}`}>
-                {el.header && <h1 className={styles.project__content__wrapper__header}>{el.header}</h1>}
-                {el.text && <p className={styles.project__content__wrapper__text}>{el.text}</p>}
+                {el.header && <h1 className={styles.project__content__wrapper__header}>{t(el.header)}</h1>}
+                {el.text && <p className={styles.project__content__wrapper__text}>{t(el.text)}</p>}
                 {el.image && <ImageContainer src={el.image} alt={"Zdjęcie opisujące funkcjonalność"} fill/>}
                 {el.list && 
                   <ul className={styles.project__content__wrapper__list}>
                     {el.list?.map((li)=>{
-                      return (<li className={styles.project__content__wrapper__list__item} key={`key:list__item__${Math.random()*1000000}`}>{li}</li>)
+                      return (<li className={styles.project__content__wrapper__list__item} key={`key:list__item__${Math.random()*1000000}`}>{t(li)}</li>)
                     })}
                   </ul>
                   }
