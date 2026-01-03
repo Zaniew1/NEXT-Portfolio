@@ -1,10 +1,10 @@
 import styles from './Language.module.css'
 import Flag from 'react-world-flags'
-export const Language = (props: {setIsPolish: (polish: boolean)=>void, isPolish: boolean}) => {
+export const Language = (props: {setLang: (lang: "pl" | "en")=>void, lang:"pl" | "en"}) => {
     return (
-            <div className={styles.lang} onClick={()=> props.setIsPolish(!props.isPolish)}>
-               {!props.isPolish && <Flag code={"pl"} /> }
-               {props.isPolish && <Flag code={"gb"} /> }
+            <div className={styles.lang} onClick={()=> props.setLang(props.lang === "pl" ? "en" :"pl")}>
+               {props.lang === "pl" && <Flag code={"pl"} /> }
+               {props.lang === "en" && <Flag code={"gb"} /> }
             </div>
            
     )
