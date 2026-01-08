@@ -12,8 +12,8 @@
     "home": {
         "one":{
             "header": "Kim jestem",
-            "text_one": "Cześć! Jestem fullstack developerem z 3-letnim stażem, a ostatnio intensywnie pracowałem nad produktem SaaS z branży reklamy (dystrybucja i wyświetlanie). Można powiedzieć, że świetnie ogarniam, jak tworzyć skalowalne i naprawdę wydajne aplikacje webowe. Teraz szukam miejsca, gdzie mógłbym skoczyć na głęboką wodę i w pełni rozwinąć skrzydła w technologiach MERN (MongoDB, Express, React, Node.js).",
-            "text_two" : " Cel? Działać przy innowacyjnych projektach, które rzeczywiście mają sens i gdzie mogę się przyczynić do stworzenia czegoś fajnego i efektywnego. Jestem gotów na nowe wyzwania! Chętnie dołączę do zespołu, który ceni sobie dobrą robotę i daje przestrzeń na rozwój.",
+            "text_one": "Cześć! Jestem fullstack developerem z 3-letnim doświadczeniem. W ostatnim czasie intensywnie pracowałem nad produktem SaaS z obszaru reklamy, obejmującym dystrybucję i wyświetlanie treści na dużą skalę. Na co dzień skupiam się na projektowaniu i budowaniu wydajnych, skalowalnych aplikacji webowych, dbając zarówno o architekturę, jak i jakość kodu.",
+            "text_two" : "Najlepiej odnajduję się w ekosystemie MERN (MongoDB, Express, React, Node.js), gdzie mogę łączyć pracę po stronie frontendu i backendu, tworząc spójne oraz efektywne rozwiązania. Interesują mnie projekty innowacyjne, które rozwiązują realne problemy. Cenię zespoły nastawione na dobrą współpracę, wysoki standard techniczny i ciągły rozwój — zarówno produktu, jak i ludzi, którzy go tworzą.",
             "milestones_one": "lata doświadczenia komercyjnego",
             "milestones_two": "commitów na github",
             "milestones_three": "chęci do rozwoju"
