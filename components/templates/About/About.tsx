@@ -100,7 +100,7 @@ export const About = () => {
                                     exit={{ width: 0 }}
                                     transition={{ duration: 0.7 }}
                                 >
-                                <Image 	fill preload={true} style={{objectFit: 'cover' }}  quality={100} alt={"Mateusz w pod krzyżem na Giewoncie"} src={'/gory1.png'}></Image>
+                                <Image 	fill preload={true} style={{objectFit: 'cover' }}  quality={100} alt={"Mateusz pod krzyżem na Giewoncie"} src={'/gory1.png'}></Image>
                 </motion.div>}
             </AnimatePresence>
         </div>

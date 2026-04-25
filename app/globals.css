@@ -3,7 +3,7 @@
 :root {
   --background: #0a0a0a;
   --foreground: #ededed;
-  --special-color: #dd9933;
+  --special-color: #f79809;
   --topnav-height: 100px;
 
 }
@@ -19,7 +19,7 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
-    --special-color: #dd9933;
+    --special-color: #f79809;
     --topnav-height: 100px;
   }
 }
