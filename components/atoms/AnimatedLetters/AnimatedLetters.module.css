@@ -17,5 +17,5 @@
 
 @keyframes whiteToGold {
   from { color: white; }
-  to   { color: #dd9933; }
+  to   { color: var(--special-color); }
 }
