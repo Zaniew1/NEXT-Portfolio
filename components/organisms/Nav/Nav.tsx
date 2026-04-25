@@ -28,8 +28,8 @@ export const Nav = (props: NavIndexTypeOptional) =>{
                 <Language lang={lang} setLang={changeLang}/>
                 {pathname != "/projects" && <Link href="/projects" className={styles.nav__link}>{t("menu.allProjects")}</Link>}
                 {pathname == "/projects" && <Link href="/" className={styles.nav__cv}>{t("menu.home")}</Link>}
-                {lang === "pl" && <Link  download href="/Mateusz_Zaniewski_FullStack_CV_POL.pdf" className={styles.nav__cv}>{t("menu.cv")}</Link>}
-                {lang === "en" && <Link  download href="/Mateusz_Zaniewski_FullStack_CV_ENG.pdf" className={styles.nav__cv}>{t("menu.cv")}</Link>}
+                {lang === "pl" && <Link  download href="/Mateusz_Zaniewski_FullStack_CV_POL.pdf" className={styles.nav__cv}>Pobierz CV (PDF)</Link>}
+                {lang === "en" && <Link  download href="/Mateusz_Zaniewski_FullStack_CV_ENG.pdf" className={styles.nav__cv}>Download CV (PDF)</Link>}
             </div>
             <Burger active={burgerActive} setActive={setBurgerActive}/>
             <NavMobile navIndex={props.navIndex} setNavIndex={props.setNavIndex} active={burgerActive} setActive={setBurgerActive} />
