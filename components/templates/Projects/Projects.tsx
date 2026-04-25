@@ -53,7 +53,7 @@ export const Projects = () => {
                                 className={styles.projects__main__view__mask}>
                             </motion.div>
                             <Link className={styles.projects__main__view__link} href={"projects/"+projectIndex}>
-                                <ImageContainer  src={`${projectData[projectIndex].images[0]}`} alt={'asd'} fill/>
+                                <ImageContainer  src={`${projectData[projectIndex].images[0]}`} alt={'Zobacz moje projekty'} fill/>
                             </Link>
                         </div>
                     </AnimatePresence>

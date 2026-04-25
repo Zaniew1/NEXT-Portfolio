@@ -35,8 +35,8 @@ export const NavMobile = (props: MobileNavPropsType & NavIndexTypeOptional)=>{
                 <Link  download href="/Mateusz_Zaniewski_FullStack_CV_POL.pdf" className={styles.navmobile__link}>{t("menu.cv")}</Link>
             </div>
             <div className={styles.navmobile__social}>
-                <Link href={"https://www.linkedin.com/in/mateusz-zaniewski-3a159b107"} className={styles.navmobile__social__icon}><Linkedin/></Link>
-                <Link href={'https://github.com/Zaniew1'} className={styles.navmobile__social__icon}><Github/></Link>
+                <Link  href={"https://www.linkedin.com/in/mateusz-zaniewski-3a159b107"} className={styles.navmobile__social__icon}>Linkedin</Link>
+                <Link href={'https://github.com/Zaniew1'} className={styles.navmobile__social__icon}>Github</Link>
             </div>
         </div>
     )

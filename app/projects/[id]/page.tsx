@@ -30,8 +30,8 @@ function ProjectPage() {
         <p className={styles.project__type}>{type}</p>
           
         <div className={styles.project__links}>
-          {github && <Link href={github}><FaGithub/>GitHub</Link>}
-          {view && <Link href={view}><BsEye/>{t("projects.projects.preview")}</Link>}
+          {github && <Link href={github}><FaGithub aria-label="Link do github"/>GitHub</Link>}
+          {view && <Link href={view}><BsEye aria-label="Link do podglądu"/>{t("projects.projects.preview")}</Link>}
         </div>
 
         {images && <ImageCarousel images={images}/>}
